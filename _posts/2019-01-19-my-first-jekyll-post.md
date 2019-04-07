@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Welcome!"
+title:  "My First Jekyll Post"
 categories: [blog]
 tags: [github, jekyll, testing]
 toc: true
@@ -11,17 +11,17 @@ toc_sticky: true
 # Hello World! 
 This is my first [Jekyll](https://jekyllrb.com/) post hosted by [Github Pages](https://pages.github.com/). The theme I use is [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/), by [Michael Rose](https://twitter.com/mmistakes).
 
-## Coding IDE
+## Preferred Coding IDE
 I primarily use VS Code on Windows 10 for all coding projects. As an early adopter, the software is only getting better with time. There are a lot of great [Videos](https://code.visualstudio.com/docs/getstarted/introvideos#VSCode) that demonstrate proper setup and an overview of the features. 
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/vscode_scheme.JPG" alt="Visual Studio Code with Hack and One Dark Pro Vivid Theme">
 <figcaption>My preferred font is Hack with a One Dark Pro Vivid Theme.</figcaption>
 
-### Integrated Version Control
-A really cool feature include with VS Code is the integrate Version Control. It makes using Git seemless and is a powerful feature.
+### My Favorite Feature
+One of my favorite features included with VS Code is the integrate Version Control. It makes using Git seemless and is a powerful feature. I'm really only telling you this because I want to make the post a bit longer so I can see what it looks like.
 
 ### Thanks
-Thanks for stopping by! The rest of this post is me messing around.
+Thanks for stopping by! The rest of this post is me messing around with Jekyll and the Theme.
 
 # Content Flow
 This following is filler text. It will be removed in the future once I am happy with my blog configuration.
