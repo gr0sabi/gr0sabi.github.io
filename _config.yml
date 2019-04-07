@@ -12,24 +12,24 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme             : "mmistakes/minimal-mistakes@4.15.2"
-minimal_mistakes_skin    : "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dirt" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "gr0sabi"
+title                    : "Notes On Things."
 title_separator          : "|"
 name                     : "John Grow"
-description              : "Another InfoSec Blog."
+description              : "An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around."
 url                      : "https://gr0sabi.github.io"
 baseurl                  : # "/_site"
 repository               : "gr0sabi/gr0sabi.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/gr0_tr.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : # false (default), "facebook", "disqus", "discourse", "google-plus", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -38,7 +38,7 @@ comments:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          : "dark"
+    colorscheme          : # "dark"
   utterances:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
@@ -98,7 +98,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google" #"google-universal", "custom"
+  provider               : "google" # "google-universal", "custom"
   google:
     tracking_id          : UA-10968978-29
     anonymize_ip         : false #default
@@ -107,8 +107,8 @@ analytics:
 # Site Author
 author:
   name             : "John Grow"
-  avatar           : "/assets/images/gr0_v2.png"
-  bio              : "Another InfoSec Blog."
+  avatar           : "/assets/images/me.jpg"
+  bio              : "InfoSec person with too many interests. Veteran."
   location         : "Virginia Beach, Virginia"
   email            :
   links:
@@ -127,9 +127,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/gr0sabi"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/johngrow/"
 
 # Site Footer
 footer:
@@ -149,9 +149,9 @@ footer:
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/johngrow/"
 
 
 # Reading Files

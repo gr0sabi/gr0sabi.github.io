@@ -1,15 +1,17 @@
 ---
-layout: post
-title:  "Welcome to my Blog!"
+layout: single
+title:  "Welcome!"
 categories: [blog]
 tags: [github, jekyll]
 ---
-**Hello world!** 
-This is my first Jekyll post hosted by Github. My theme is Minimal Mistakes
+**Hello World!** 
+This is my first [Jekyll](https://jekyllrb.com/) post hosted by [Github Pages](https://pages.github.com/). The theme I use is [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/), by [Michael Rose](https://twitter.com/mmistakes).
 
-I hope you like it!
+Thanks for stopping by!
 
+**Testing Code Blocks:**
 ```python
-s = "Python is fun"
-print s
+x = "Coding while using VS Code with an absurd amount of "
+y = "customizations and extensions is fun."
+print (x + y)
 ```
