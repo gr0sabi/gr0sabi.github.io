@@ -6,6 +6,7 @@ tags: [testing, jekyll]
 toc: true
 toc_label: "Gangsta Text"
 toc_icon: "smile-beam"  # corresponding Font Awesome icon name (without fa prefix)
+toc_sticky: true
 ---
 **Hello Wanderer!** 
 This is definitely a test post. It will be removed in the future once I am happy with my blog configuration.
