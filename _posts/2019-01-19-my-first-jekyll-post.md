@@ -12,7 +12,7 @@ toc_sticky: true
 This is my first [Jekyll](https://jekyllrb.com/) post hosted by [Github Pages](https://pages.github.com/). The theme I use is [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/), by [Michael Rose](https://twitter.com/mmistakes).
 
 ## Coding IDE
-I primarily use VS Code on Windows 10 for all coding projects. As an early adopter, the software is only getting better with time. There are a lot of great YouTube channels that demonstrate proper setup and recommended extensions. 
+I primarily use VS Code on Windows 10 for all coding projects. As an early adopter, the software is only getting better with time. There are a lot of great [Videos](https://code.visualstudio.com/docs/getstarted/introvideos#VSCode) that demonstrate proper setup and an overview of the features. 
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/vscode_scheme.JPG" alt="Visual Studio Code with Hack and One Dark Pro Vivid Theme">
 <figcaption>My preferred font is Hack with a One Dark Pro Vivid Theme.</figcaption>
