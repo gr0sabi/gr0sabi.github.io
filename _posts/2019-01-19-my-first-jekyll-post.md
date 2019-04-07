@@ -4,9 +4,8 @@ title:  "Welcome to my Blog!"
 categories: [blog]
 tags: [github, jekyll]
 ---
-# Welcome
-
-**Hello world**, this is my first Jekyll blog post hosted by Github.
+**Hello world!** 
+This is my first Jekyll post hosted by Github. My theme is Minimal Mistakes
 
 I hope you like it!
 
