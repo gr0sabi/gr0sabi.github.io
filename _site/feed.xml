@@ -1,21 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2019-04-07T01:28:47-04:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">gr0sabi</title><subtitle>Another InfoSec Blog.</subtitle><author><name>John Grow</name></author><entry><title type="html">Test3</title><link href="https://gr0sabi.github.io/test3/" rel="alternate" type="text/html" title="Test3" /><published>2019-01-19T00:00:00-05:00</published><updated>2019-01-19T00:00:00-05:00</updated><id>https://gr0sabi.github.io/test3</id><content type="html" xml:base="https://gr0sabi.github.io/test3/">&lt;p&gt;Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
-berry of several species of woody vines in the genus Actinidia.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2019-04-07T09:50:24-04:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">gr0sabi</title><subtitle>Another InfoSec Blog.</subtitle><author><name>John Grow</name></author><entry><title type="html">Test2</title><link href="https://gr0sabi.github.io/test2/" rel="alternate" type="text/html" title="Test2" /><published>2019-01-19T00:00:00-05:00</published><updated>2019-01-19T00:00:00-05:00</updated><id>https://gr0sabi.github.io/test2</id><content type="html" xml:base="https://gr0sabi.github.io/test2/">&lt;p&gt;An apple is a sweet, edible fruit produced by an apple tree.&lt;/p&gt;
 
-&lt;p&gt;The most common cultivar group of kiwifruit is oval, about the size of a large
-hen’s egg (5–8 cm (2.0–3.1 in) in length and 4.5–5.5 cm (1.8–2.2 in) in
-diameter). It has a fibrous, dull greenish-brown skin and bright green or
-golden flesh with rows of tiny, black, edible seeds. The fruit has a soft
-texture, with a sweet and unique flavor.&lt;/p&gt;</content><author><name>ted</name></author><summary type="html">Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia.</summary></entry><entry><title type="html">Test</title><link href="https://gr0sabi.github.io/test/" rel="alternate" type="text/html" title="Test" /><published>2019-01-19T00:00:00-05:00</published><updated>2019-01-19T00:00:00-05:00</updated><id>https://gr0sabi.github.io/test</id><content type="html" xml:base="https://gr0sabi.github.io/test/">&lt;p&gt;A banana is an edible fruit – botanically a berry – produced by several kinds
+&lt;p&gt;Apple trees are cultivated worldwide, and are the most widely grown species in
+the genus Malus. The tree originated in Central Asia, where its wild ancestor,
+Malus sieversii, is still found today. Apples have been grown for thousands of
+years in Asia and Europe, and were brought to North America by European
+colonists.&lt;/p&gt;</content><author><name>jill</name></author><summary type="html">An apple is a sweet, edible fruit produced by an apple tree.</summary></entry><entry><title type="html">Test</title><link href="https://gr0sabi.github.io/test/" rel="alternate" type="text/html" title="Test" /><published>2019-01-19T00:00:00-05:00</published><updated>2019-01-19T00:00:00-05:00</updated><id>https://gr0sabi.github.io/test</id><content type="html" xml:base="https://gr0sabi.github.io/test/">&lt;p&gt;A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.&lt;/p&gt;
 
 &lt;p&gt;In some countries, bananas used for cooking may be called “plantains”,
 distinguishing them from dessert bananas. The fruit is variable in size, color,
 and firmness, but is usually elongated and curved, with soft flesh rich in
 starch covered with a rind, which may be green, yellow, red, purple, or brown
-when ripe.&lt;/p&gt;</content><author><name>John Grow</name></author><summary type="html">A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.</summary></entry><entry><title type="html">Test2</title><link href="https://gr0sabi.github.io/test2/" rel="alternate" type="text/html" title="Test2" /><published>2019-01-19T00:00:00-05:00</published><updated>2019-01-19T00:00:00-05:00</updated><id>https://gr0sabi.github.io/test2</id><content type="html" xml:base="https://gr0sabi.github.io/test2/">&lt;p&gt;An apple is a sweet, edible fruit produced by an apple tree.&lt;/p&gt;
+when ripe.&lt;/p&gt;
 
-&lt;p&gt;Apple trees are cultivated worldwide, and are the most widely grown species in
-the genus Malus. The tree originated in Central Asia, where its wild ancestor,
-Malus sieversii, is still found today. Apples have been grown for thousands of
-years in Asia and Europe, and were brought to North America by European
-colonists.&lt;/p&gt;</content><author><name>jill</name></author><summary type="html">An apple is a sweet, edible fruit produced by an apple tree.</summary></entry></feed>
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Python is fun&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>John Grow</name></author><summary type="html">A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.</summary></entry></feed>
