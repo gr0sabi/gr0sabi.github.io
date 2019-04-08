@@ -18,7 +18,7 @@ I primarily use VS Code on Windows 10 for all coding projects. As an early adopt
 <figcaption>My preferred font is Hack with a One Dark Pro Vivid Theme.</figcaption>
 
 ### My Favorite Feature
-One of my favorite features included with VS Code is the integrate Version Control. It makes using Git seemless and is a powerful feature. I'm really only telling you this because I want to make the post a bit longer so I can see what it looks like.
+One of my favorite features included with VS Code is the integrated Version Control. It makes using Git seemless and is a powerful feature. I'm really only telling you this because (1) I want to make the post a bit longer so I can see what it looks like and (2) I'm a VS Code fanboy.
 
 ### Thanks
 Thanks for stopping by! The rest of this post is me messing around with Jekyll and the Theme.
@@ -36,7 +36,7 @@ Pot ipsum shizzlin dizzle sit mah nizzle, gangsta adipiscing elit. Nullam rizzle
 
 Crazy dapibizzle. Curabitur tellus break yo neck, yall, pretium rizzle, mattizzle get down get down, eleifend vitae, nunc. Gangsta ante my shizz primizzle nizzle faucibizzle shiznit gizzle izzle ultricizzle gizzle cubilia Crackalackin; Sizzle vitae break it down dizzle brizzle daahng dawg aliquizzle. Phasellizzle gangsta owned. 
 
-#Code Block Test
+# Code Block Test
 Below is what code blocks look like using this theme.
 
 ## Testing Tiny Code Blocks
