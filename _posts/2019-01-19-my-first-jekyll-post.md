@@ -32,12 +32,12 @@ This following is filler text. It will be removed in the future once I am happy 
 
 Pot ipsum shizzlin dizzle sit mah nizzle, gangsta adipiscing elit. Nullam rizzle velizzle, yippiyo volutpat, shizzle my nizzle crocodizzle that's the shizzle, gravida vel, uhuh ... yih!. Fo shizzle mah nizzle fo rizzle, mah home g-dizzle you son of a bizzle tortizzle. Own yo' eros. Crackalackin bling bling dolor dapibus its fo rizzle tempizzle hizzle. 
 
-### Crazy dapibizzle
+## Crazy dapibizzle
 
 Crazy dapibizzle. Curabitur tellus break yo neck, yall, pretium rizzle, mattizzle get down get down, eleifend vitae, nunc. Gangsta ante my shizz primizzle nizzle faucibizzle shiznit gizzle izzle ultricizzle gizzle cubilia Crackalackin; Sizzle vitae break it down dizzle brizzle daahng dawg aliquizzle. Phasellizzle gangsta owned. 
 
 # Code Block Test
-Below is what code blocks look like using this theme.
+Below is what code blocks look like using this theme.S
 
 ## Testing Tiny Code Blocks
 ```python
