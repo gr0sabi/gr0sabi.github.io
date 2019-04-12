@@ -111,7 +111,7 @@ I used a fully updated [64-bit Kali VirtualBox VM](https://www.offensive-securit
 ## OSCP Exam Challenge
 I concur with others in the community and believe that utilizing [Reconnoitre](https://github.com/codingo/Reconnoitre) while knocking out the Buffer Overflow is the most efficient way to begin the exam. Obviously, test and become familiar with Reconnoitre's usage and outputs **prior** to the exam if you choose to use it. This is the Nmap command line that Reconnoitre used for a single machine, using a ```--services``` argument:
 ```
-nmap -vv -Pn --disable-arp-ping -sS -A -sC -p- -T 3 -script-args=unsafe=1 -n -oN /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX.nmap -oX /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.63.161_nmap_scan_import.xml 192.168.XX.XX
+nmap -vv -Pn --disable-arp-ping -sS -A -sC -p- -T 3 -script-args=unsafe=1 -n -oN /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX.nmap -oX /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX_nmap_scan_import.xml 192.168.XX.XX
 ```
 
 In regards to the [*single use*](https://support.offensive-security.com/oscp-exam-guide/#section-1-exam-requirements) of Metasploit Modules and Meterpreter, I saved it until I *thoroughly* attempted every remaining machine **manually**. This strategy worked out in my favor, so it is good practice in the PWK Lab environment to attempt to compromise all machines manually.
