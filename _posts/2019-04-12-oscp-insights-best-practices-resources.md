@@ -48,7 +48,7 @@ Another invaluable resource to go along side of [ippsec's videos](https://www.yo
 + It has web and mobile applications that you can use remotely.
 
 # Useful Resources
-Below are some excellent online resources that I utilized during PWK and the Exam:
+Below are excellent online resources that I utilized:
 
 ## Linux 
 [Basic Linux Enumeration by g0tmi1k](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)<br />
