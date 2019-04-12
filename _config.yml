@@ -132,7 +132,7 @@ author:
       url: "https://www.linkedin.com/in/johngrow/"
     - label: "YouTube"
       icon: "fab fa-fw fa-youtube"
-      url: "https://www.youtube.com/user/youdoober"
+      # url: "https://www.youtube.com/user/youdoober"
 
 # Site Footer
 footer:
