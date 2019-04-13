@@ -66,7 +66,7 @@ Below are excellent online resources that I utilized:
 [SANS Penetration Testing Resources](https://pen-testing.sans.org/resources/downloads)<br />
 [A Red Teamer's Guide to Pivoting by Artem Kondratenko](https://artkond.com/2017/03/23/pivoting-guide/)
 
-## More Stack-Based Buffer Overflow 
+## Stack-Based Buffer Overflow 
 [The Presentation and Tutorial for Cross-Site Scripters Who Can't Stack Buffer Overflow Good and Want to Do Other Stuff Good Too](https://github.com/justinsteven/dostackbufferoverflowgood)<br />
 [VeteranSec's 32-Bit Windows Buffer Overflows Made Easy](https://veteransec.com/2018/09/10/32-bit-windows-buffer-overflows-made-easy/)<br />
 [Exploit Writing Tutorial: Stack Based Overflows by Corelanc0d3r](https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/)<br />
@@ -121,7 +121,7 @@ I recorded the entire exam with [OBS](https://obsproject.com/), following the ad
 The proctors were not an issue and were professional and unobtrusive. The webcam and communication with them was smooth, other than a single webcam restart.
 
 ### Progress Checklist
-Within OneNote, I created a "Progress Checklist" tab, so I didn't miss any major items. I modified to fit the exam scope once I received the instructions. This was the basic structure:
+Within OneNote, I created a "Progress Checklist" tab, so I didn't miss any major items. I modified it to fit the exam scope once I received the instructions. This was the basic structure:
 ```
 Progress Checklist
 ├── Box 1 - 192.168.X.X
