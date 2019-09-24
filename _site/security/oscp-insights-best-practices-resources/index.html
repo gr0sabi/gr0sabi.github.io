@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.16.6 by Michael Rose
   Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -12,6 +12,8 @@
 <!-- begin _includes/seo.html --><title>OSCP: Insights, Best Practices, and Resources | Notes On Bytes</title>
 <meta name="description" content="PurposeI wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is a lot of great information available on the Internet so I will make an honest effort not to sound like a broken record.">
 
+
+  <meta name="author" content="John Grow">
 
 
 <meta property="og:type" content="article">
@@ -57,19 +59,16 @@
 
 
 
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
       "@type": "Person",
       "name": "John Grow",
-      "url": "https://gr0sabi.github.io",
-      "sameAs": null
-    }
-  </script>
-
+      "url": "https://gr0sabi.github.io/"
+    
+  }
+</script>
 
 
 
@@ -117,6 +116,14 @@
   </head>
 
   <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -131,7 +138,10 @@
         
           <a class="site-logo" href="/"><img src="/assets/images/gr0_tr.png" alt=""></a>
         
-        <a class="site-title" href="/">Notes On Bytes</a>
+        <a class="site-title" href="/">
+          Notes On Bytes
+          
+        </a>
         <ul class="visible-links"></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -209,9 +219,10 @@
       <h3 class="author__name" itemprop="name">John Grow</h3>
     
     
-      <p class="author__bio" itemprop="description">
-        A man with too many interests.
-      </p>
+      <div class="author__bio" itemprop="description">
+        <p>A man with too many interests.</p>
+
+      </div>
     
   </div>
 
@@ -246,8 +257,6 @@
         
           
         
-      
-
       
 
       
@@ -364,7 +373,7 @@
       <li><a href="#linux">Linux</a></li>
       <li><a href="#windows">Windows</a></li>
       <li><a href="#pentesting">Pentesting</a></li>
-      <li><a href="#more-stack-based-buffer-overflow">More Stack-Based Buffer Overflow</a></li>
+      <li><a href="#stack-based-buffer-overflow">Stack-Based Buffer Overflow</a></li>
       <li><a href="#oscp-specific-guides">OSCP Specific Guides</a></li>
     </ul>
   </li>
@@ -437,7 +446,7 @@
 </ul>
 
 <h1 id="useful-resources">Useful Resources</h1>
-<p>Below are some excellent online resources that I utilized during PWK and the Exam:</p>
+<p>Below are excellent online resources that I utilized:</p>
 
 <h2 id="linux">Linux</h2>
 <p><a href="https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/">Basic Linux Enumeration by g0tmi1k</a><br>
@@ -455,7 +464,7 @@
 <a href="https://pen-testing.sans.org/resources/downloads">SANS Penetration Testing Resources</a><br>
 <a href="https://artkond.com/2017/03/23/pivoting-guide/">A Red Teamer’s Guide to Pivoting by Artem Kondratenko</a></p>
 
-<h2 id="more-stack-based-buffer-overflow">More Stack-Based Buffer Overflow</h2>
+<h2 id="stack-based-buffer-overflow">Stack-Based Buffer Overflow</h2>
 <p><a href="https://github.com/justinsteven/dostackbufferoverflowgood">The Presentation and Tutorial for Cross-Site Scripters Who Can’t Stack Buffer Overflow Good and Want to Do Other Stuff Good Too</a><br>
 <a href="https://veteransec.com/2018/09/10/32-bit-windows-buffer-overflows-made-easy/">VeteranSec’s 32-Bit Windows Buffer Overflows Made Easy</a><br>
 <a href="https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/">Exploit Writing Tutorial: Stack Based Overflows by Corelanc0d3r</a><br>
@@ -498,7 +507,7 @@
 
 <h2 id="oscp-exam-challenge">OSCP Exam Challenge</h2>
 <p>I concur with others in the community and believe that utilizing <a href="https://github.com/codingo/Reconnoitre">Reconnoitre</a> while knocking out the Buffer Overflow is the most efficient way to begin the exam. Obviously, test and become familiar with Reconnoitre’s usage and outputs <strong>prior</strong> to the exam if you choose to use it. This is the Nmap command line that Reconnoitre used for a single machine, using a <code class="highlighter-rouge">--services</code> argument:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap -vv -Pn --disable-arp-ping -sS -A -sC -p- -T 3 -script-args=unsafe=1 -n -oN /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX.nmap -oX /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.63.161_nmap_scan_import.xml 192.168.XX.XX
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap -vv -Pn --disable-arp-ping -sS -A -sC -p- -T 3 -script-args=unsafe=1 -n -oN /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX.nmap -oX /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX_nmap_scan_import.xml 192.168.XX.XX
 </code></pre></div></div>
 
 <p>In regards to the <a href="https://support.offensive-security.com/oscp-exam-guide/#section-1-exam-requirements"><em>single use</em></a> of Metasploit Modules and Meterpreter, I saved it until I <em>thoroughly</em> attempted every remaining machine <strong>manually</strong>. This strategy worked out in my favor, so it is good practice in the PWK Lab environment to attempt to compromise all machines manually.</p>
@@ -508,7 +517,7 @@
 <p>The proctors were not an issue and were professional and unobtrusive. The webcam and communication with them was smooth, other than a single webcam restart.</p>
 
 <h3 id="progress-checklist">Progress Checklist</h3>
-<p>Within OneNote, I created a “Progress Checklist” tab, so I didn’t miss any major items. I modified to fit the exam scope once I received the instructions. This was the basic structure:</p>
+<p>Within OneNote, I created a “Progress Checklist” tab, so I didn’t miss any major items. I modified it to fit the exam scope once I received the instructions. This was the basic structure:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Progress Checklist
 ├── Box 1 - 192.168.X.X
 │   ├── local.txt
@@ -707,7 +716,7 @@ This is my first Jekyll post hosted by Github Pages. The theme I use is Minimal 
 
     
 
-    <div class="page__footer">
+    <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
 
@@ -751,7 +760,9 @@ This is my first Jekyll post hosted by Github Pages. The theme I use is Minimal 
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
 
 
 

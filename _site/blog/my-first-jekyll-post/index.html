@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.16.6 by Michael Rose
   Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -12,6 +12,8 @@
 <!-- begin _includes/seo.html --><title>My First Jekyll Post | Notes On Bytes</title>
 <meta name="description" content="Hello World!This is my first Jekyll post hosted by Github Pages. The theme I use is Minimal Mistakes, by Michael Rose.">
 
+
+  <meta name="author" content="John Grow">
 
 
 <meta property="og:type" content="article">
@@ -57,19 +59,16 @@
 
 
 
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
       "@type": "Person",
       "name": "John Grow",
-      "url": "https://gr0sabi.github.io",
-      "sameAs": null
-    }
-  </script>
-
+      "url": "https://gr0sabi.github.io/"
+    
+  }
+</script>
 
 
 
@@ -117,6 +116,14 @@
   </head>
 
   <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -131,7 +138,10 @@
         
           <a class="site-logo" href="/"><img src="/assets/images/gr0_tr.png" alt=""></a>
         
-        <a class="site-title" href="/">Notes On Bytes</a>
+        <a class="site-title" href="/">
+          Notes On Bytes
+          
+        </a>
         <ul class="visible-links"></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -209,9 +219,10 @@
       <h3 class="author__name" itemprop="name">John Grow</h3>
     
     
-      <p class="author__bio" itemprop="description">
-        A man with too many interests.
-      </p>
+      <div class="author__bio" itemprop="description">
+        <p>A man with too many interests.</p>
+
+      </div>
     
   </div>
 
@@ -246,8 +257,6 @@
         
           
         
-      
-
       
 
       
@@ -378,7 +387,7 @@
 <figcaption>My preferred font is Hack with a One Dark Pro Vivid Theme.</figcaption>
 
 <h3 id="my-favorite-feature">My Favorite Feature</h3>
-<p>One of my favorite features included with VS Code is the integrated Version Control. It makes using Git seemless and is a powerful feature. I’m really only telling you this because (1) I want to make the post a bit longer so I can see what it looks like and (2) I’m a VS Code fanboy.</p>
+<p>One of my favorite features included with VS Code is the integrated Version Control. It makes using Git seemless and is a powerful feature. I’m really only telling you this because I want to make the post a bit longer so I can see what it looks like.</p>
 
 <h3 id="thanks">Thanks</h3>
 <p>Thanks for stopping by! The rest of this post is me messing around with Jekyll and the Theme.</p>
@@ -397,7 +406,7 @@
 <p>Crazy dapibizzle. Curabitur tellus break yo neck, yall, pretium rizzle, mattizzle get down get down, eleifend vitae, nunc. Gangsta ante my shizz primizzle nizzle faucibizzle shiznit gizzle izzle ultricizzle gizzle cubilia Crackalackin; Sizzle vitae break it down dizzle brizzle daahng dawg aliquizzle. Phasellizzle gangsta owned.</p>
 
 <h1 id="code-block-test">Code Block Test</h1>
-<p>Below is what code blocks look like using this theme.S</p>
+<p>Below is what code blocks look like using this theme.</p>
 
 <h2 id="testing-tiny-code-blocks">Testing Tiny Code Blocks</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="s">"Coding while using VS Code with an absurd amount of "</span>
@@ -524,7 +533,6 @@
       <div class="grid__wrapper">
         
           
-          
 
 
 
@@ -552,10 +560,9 @@ I wrote this post to give back some of the insights I’ve discovered on my jour
 </div>
 
         
-          
-            
       </div>
     </div>
+  
   
 </div>
 
@@ -563,7 +570,7 @@ I wrote this post to give back some of the insights I’ve discovered on my jour
 
     
 
-    <div class="page__footer">
+    <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
 
@@ -607,7 +614,9 @@ I wrote this post to give back some of the insights I’ve discovered on my jour
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
 
 
 

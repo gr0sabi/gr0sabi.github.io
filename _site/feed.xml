@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2019-04-12T17:21:46-04:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">Notes On Bytes</title><subtitle>An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around.</subtitle><author><name>John Grow</name></author><entry><title type="html">OSCP: Insights, Best Practices, and Resources</title><link href="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/" rel="alternate" type="text/html" title="OSCP: Insights, Best Practices, and Resources" /><published>2019-04-12T00:00:00-04:00</published><updated>2019-04-12T00:00:00-04:00</updated><id>https://gr0sabi.github.io/security/oscp-insights-best-practices-resources</id><content type="html" xml:base="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/">&lt;h1 id=&quot;purpose&quot;&gt;Purpose&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2019-09-24T18:39:52-04:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">Notes On Bytes</title><subtitle>An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around.</subtitle><author><name>John Grow</name></author><entry><title type="html">OSCP: Insights, Best Practices, and Resources</title><link href="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/" rel="alternate" type="text/html" title="OSCP: Insights, Best Practices, and Resources" /><published>2019-04-12T00:00:00-04:00</published><updated>2019-04-12T00:00:00-04:00</updated><id>https://gr0sabi.github.io/security/oscp-insights-best-practices-resources</id><content type="html" xml:base="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/">&lt;h1 id=&quot;purpose&quot;&gt;Purpose&lt;/h1&gt;
 &lt;p&gt;I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is &lt;em&gt;a lot&lt;/em&gt; of great information available on the Internet so I will make an honest effort not to sound like a broken record.&lt;/p&gt;
 
 &lt;h2 id=&quot;a-little-about-me&quot;&gt;A Little About Me&lt;/h2&gt;
@@ -42,7 +42,7 @@
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;useful-resources&quot;&gt;Useful Resources&lt;/h1&gt;
-&lt;p&gt;Below are some excellent online resources that I utilized during PWK and the Exam:&lt;/p&gt;
+&lt;p&gt;Below are excellent online resources that I utilized:&lt;/p&gt;
 
 &lt;h2 id=&quot;linux&quot;&gt;Linux&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/&quot;&gt;Basic Linux Enumeration by g0tmi1k&lt;/a&gt;&lt;br /&gt;
@@ -60,7 +60,7 @@
 &lt;a href=&quot;https://pen-testing.sans.org/resources/downloads&quot;&gt;SANS Penetration Testing Resources&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://artkond.com/2017/03/23/pivoting-guide/&quot;&gt;A Red Teamer’s Guide to Pivoting by Artem Kondratenko&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;more-stack-based-buffer-overflow&quot;&gt;More Stack-Based Buffer Overflow&lt;/h2&gt;
+&lt;h2 id=&quot;stack-based-buffer-overflow&quot;&gt;Stack-Based Buffer Overflow&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/justinsteven/dostackbufferoverflowgood&quot;&gt;The Presentation and Tutorial for Cross-Site Scripters Who Can’t Stack Buffer Overflow Good and Want to Do Other Stuff Good Too&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://veteransec.com/2018/09/10/32-bit-windows-buffer-overflows-made-easy/&quot;&gt;VeteranSec’s 32-Bit Windows Buffer Overflows Made Easy&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/&quot;&gt;Exploit Writing Tutorial: Stack Based Overflows by Corelanc0d3r&lt;/a&gt;&lt;br /&gt;
@@ -103,7 +103,7 @@
 
 &lt;h2 id=&quot;oscp-exam-challenge&quot;&gt;OSCP Exam Challenge&lt;/h2&gt;
 &lt;p&gt;I concur with others in the community and believe that utilizing &lt;a href=&quot;https://github.com/codingo/Reconnoitre&quot;&gt;Reconnoitre&lt;/a&gt; while knocking out the Buffer Overflow is the most efficient way to begin the exam. Obviously, test and become familiar with Reconnoitre’s usage and outputs &lt;strong&gt;prior&lt;/strong&gt; to the exam if you choose to use it. This is the Nmap command line that Reconnoitre used for a single machine, using a &lt;code class=&quot;highlighter-rouge&quot;&gt;--services&lt;/code&gt; argument:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nmap -vv -Pn --disable-arp-ping -sS -A -sC -p- -T 3 -script-args=unsafe=1 -n -oN /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX.nmap -oX /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.63.161_nmap_scan_import.xml 192.168.XX.XX
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nmap -vv -Pn --disable-arp-ping -sS -A -sC -p- -T 3 -script-args=unsafe=1 -n -oN /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX.nmap -oX /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX_nmap_scan_import.xml 192.168.XX.XX
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;In regards to the &lt;a href=&quot;https://support.offensive-security.com/oscp-exam-guide/#section-1-exam-requirements&quot;&gt;&lt;em&gt;single use&lt;/em&gt;&lt;/a&gt; of Metasploit Modules and Meterpreter, I saved it until I &lt;em&gt;thoroughly&lt;/em&gt; attempted every remaining machine &lt;strong&gt;manually&lt;/strong&gt;. This strategy worked out in my favor, so it is good practice in the PWK Lab environment to attempt to compromise all machines manually.&lt;/p&gt;
@@ -113,7 +113,7 @@
 &lt;p&gt;The proctors were not an issue and were professional and unobtrusive. The webcam and communication with them was smooth, other than a single webcam restart.&lt;/p&gt;
 
 &lt;h3 id=&quot;progress-checklist&quot;&gt;Progress Checklist&lt;/h3&gt;
-&lt;p&gt;Within OneNote, I created a “Progress Checklist” tab, so I didn’t miss any major items. I modified to fit the exam scope once I received the instructions. This was the basic structure:&lt;/p&gt;
+&lt;p&gt;Within OneNote, I created a “Progress Checklist” tab, so I didn’t miss any major items. I modified it to fit the exam scope once I received the instructions. This was the basic structure:&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Progress Checklist
 ├── Box 1 - 192.168.X.X
 │   ├── local.txt
@@ -179,7 +179,7 @@
 &lt;figcaption&gt;My preferred font is Hack with a One Dark Pro Vivid Theme.&lt;/figcaption&gt;
 
 &lt;h3 id=&quot;my-favorite-feature&quot;&gt;My Favorite Feature&lt;/h3&gt;
-&lt;p&gt;One of my favorite features included with VS Code is the integrated Version Control. It makes using Git seemless and is a powerful feature. I’m really only telling you this because (1) I want to make the post a bit longer so I can see what it looks like and (2) I’m a VS Code fanboy.&lt;/p&gt;
+&lt;p&gt;One of my favorite features included with VS Code is the integrated Version Control. It makes using Git seemless and is a powerful feature. I’m really only telling you this because I want to make the post a bit longer so I can see what it looks like.&lt;/p&gt;
 
 &lt;h3 id=&quot;thanks&quot;&gt;Thanks&lt;/h3&gt;
 &lt;p&gt;Thanks for stopping by! The rest of this post is me messing around with Jekyll and the Theme.&lt;/p&gt;
@@ -198,7 +198,7 @@
 &lt;p&gt;Crazy dapibizzle. Curabitur tellus break yo neck, yall, pretium rizzle, mattizzle get down get down, eleifend vitae, nunc. Gangsta ante my shizz primizzle nizzle faucibizzle shiznit gizzle izzle ultricizzle gizzle cubilia Crackalackin; Sizzle vitae break it down dizzle brizzle daahng dawg aliquizzle. Phasellizzle gangsta owned.&lt;/p&gt;
 
 &lt;h1 id=&quot;code-block-test&quot;&gt;Code Block Test&lt;/h1&gt;
-&lt;p&gt;Below is what code blocks look like using this theme.S&lt;/p&gt;
+&lt;p&gt;Below is what code blocks look like using this theme.&lt;/p&gt;
 
 &lt;h2 id=&quot;testing-tiny-code-blocks&quot;&gt;Testing Tiny Code Blocks&lt;/h2&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Coding while using VS Code with an absurd amount of &quot;&lt;/span&gt;

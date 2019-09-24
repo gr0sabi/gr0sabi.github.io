@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.16.6 by Michael Rose
   Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -12,6 +12,8 @@
 <!-- begin _includes/seo.html --><title>Notes On Bytes</title>
 <meta name="description" content="An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around.">
 
+
+  <meta name="author" content="John Grow">
 
 
 <meta property="og:type" content="website">
@@ -53,19 +55,16 @@
 
 
 
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
       "@type": "Person",
       "name": "John Grow",
-      "url": "https://gr0sabi.github.io",
-      "sameAs": null
-    }
-  </script>
-
+      "url": "https://gr0sabi.github.io/"
+    
+  }
+</script>
 
 
 
@@ -113,6 +112,14 @@
   </head>
 
   <body class="layout--home">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -127,7 +134,10 @@
         
           <a class="site-logo" href="/"><img src="/assets/images/gr0_tr.png" alt=""></a>
         
-        <a class="site-title" href="/">Notes On Bytes</a>
+        <a class="site-title" href="/">
+          Notes On Bytes
+          
+        </a>
         <ul class="visible-links"></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -169,9 +179,10 @@
       <h3 class="author__name" itemprop="name">John Grow</h3>
     
     
-      <p class="author__bio" itemprop="description">
-        A man with too many interests.
-      </p>
+      <div class="author__bio" itemprop="description">
+        <p>A man with too many interests.</p>
+
+      </div>
     
   </div>
 
@@ -206,8 +217,6 @@
         
           
         
-      
-
       
 
       
@@ -350,7 +359,7 @@ This is my first Jekyll post hosted by Github Pages. The theme I use is Minimal 
 
     
 
-    <div class="page__footer">
+    <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
 
@@ -394,7 +403,9 @@ This is my first Jekyll post hosted by Github Pages. The theme I use is Minimal 
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
 
 
 
