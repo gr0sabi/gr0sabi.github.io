@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme             : "mmistakes/minimal-mistakes@4.16.6"
-minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "neon" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "John Grow"
   avatar           : "/assets/images/me.jpg"
-  bio              : "A man with too many interests."
+  bio              : "The more I learn, the more I realize how much I don't know. - Einstein"
   location         : "Virginia Beach, Virginia, USA"
   email            :
   links:

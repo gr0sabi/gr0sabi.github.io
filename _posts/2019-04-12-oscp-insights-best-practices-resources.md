@@ -82,7 +82,7 @@ Below are excellent online resources that I utilized:
 # My Experience with PWK
 I signed up for the 60 day lab time, of which life only allowed probably 35-40 days of that. I took a week of leave from work to spend dedicated time doing all the exercises and course material initially. The course materials (Lectures and Course Guide) teach you everything you need to know to successfully compromise machines with Kali Linux within the Lab network.
 
-Afterwards, I was able to fully compromise about 90% of the machines. I took field notes and screenshots on every machine as if I were going to write report on them. I created a map of the entire lab network(s) so I could track my overall progress and coverage.
+Afterwards, I was able to fully compromise about 90% of the machines. I took field notes and screenshots on every machine as if I were going to write a report on them. I created a map of the entire lab network(s) so I could track my overall progress and coverage.
 
 I scheduled my exam for day 58 of my lab time. As test day approached, I did not spend any time attacking the remaining machines but focused more on test-day preparations and brushing up my buffer overflow process. 
 

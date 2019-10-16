@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2019-09-24T18:39:52-04:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">Notes On Bytes</title><subtitle>An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around.</subtitle><author><name>John Grow</name></author><entry><title type="html">OSCP: Insights, Best Practices, and Resources</title><link href="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/" rel="alternate" type="text/html" title="OSCP: Insights, Best Practices, and Resources" /><published>2019-04-12T00:00:00-04:00</published><updated>2019-04-12T00:00:00-04:00</updated><id>https://gr0sabi.github.io/security/oscp-insights-best-practices-resources</id><content type="html" xml:base="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/">&lt;h1 id=&quot;purpose&quot;&gt;Purpose&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2019-10-16T15:11:32-04:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">Notes On Bytes</title><subtitle>An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around.</subtitle><author><name>John Grow</name></author><entry><title type="html">OSCP: Insights, Best Practices, and Resources</title><link href="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/" rel="alternate" type="text/html" title="OSCP: Insights, Best Practices, and Resources" /><published>2019-04-12T00:00:00-04:00</published><updated>2019-04-12T00:00:00-04:00</updated><id>https://gr0sabi.github.io/security/oscp-insights-best-practices-resources</id><content type="html" xml:base="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/">&lt;h1 id=&quot;purpose&quot;&gt;Purpose&lt;/h1&gt;
 &lt;p&gt;I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is &lt;em&gt;a lot&lt;/em&gt; of great information available on the Internet so I will make an honest effort not to sound like a broken record.&lt;/p&gt;
 
 &lt;h2 id=&quot;a-little-about-me&quot;&gt;A Little About Me&lt;/h2&gt;
@@ -76,7 +76,7 @@
 &lt;h1 id=&quot;my-experience-with-pwk&quot;&gt;My Experience with PWK&lt;/h1&gt;
 &lt;p&gt;I signed up for the 60 day lab time, of which life only allowed probably 35-40 days of that. I took a week of leave from work to spend dedicated time doing all the exercises and course material initially. The course materials (Lectures and Course Guide) teach you everything you need to know to successfully compromise machines with Kali Linux within the Lab network.&lt;/p&gt;
 
-&lt;p&gt;Afterwards, I was able to fully compromise about 90% of the machines. I took field notes and screenshots on every machine as if I were going to write report on them. I created a map of the entire lab network(s) so I could track my overall progress and coverage.&lt;/p&gt;
+&lt;p&gt;Afterwards, I was able to fully compromise about 90% of the machines. I took field notes and screenshots on every machine as if I were going to write a report on them. I created a map of the entire lab network(s) so I could track my overall progress and coverage.&lt;/p&gt;
 
 &lt;p&gt;I scheduled my exam for day 58 of my lab time. As test day approached, I did not spend any time attacking the remaining machines but focused more on test-day preparations and brushing up my buffer overflow process.&lt;/p&gt;
 
@@ -169,64 +169,4 @@
 &lt;h1 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h1&gt;
 &lt;p&gt;I &lt;em&gt;really&lt;/em&gt; enjoyed everything. The PWK course and the OSCP Exam Challenge was one of the most rewarding and humbling learning experiences I’ve professionally had. It’s one of very few certifications that lets you feel part of a community that is passionate about Information Security. Now to really dig deep and go for OCSE!&lt;/p&gt;
 
-&lt;p&gt;Good luck, try harder, and DM me on &lt;a href=&quot;https://twitter.com/gr0sabi&quot;&gt;Twitter&lt;/a&gt; if you need anything.&lt;/p&gt;</content><author><name>John Grow</name></author><category term="oscp" /><category term="hacking" /><category term="penetration testing" /><category term="offensive security" /><category term="certification" /><summary type="html">Purpose I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is a lot of great information available on the Internet so I will make an honest effort not to sound like a broken record.</summary></entry><entry><title type="html">My First Jekyll Post</title><link href="https://gr0sabi.github.io/blog/my-first-jekyll-post/" rel="alternate" type="text/html" title="My First Jekyll Post" /><published>2019-01-19T00:00:00-05:00</published><updated>2019-01-19T00:00:00-05:00</updated><id>https://gr0sabi.github.io/blog/my-first-jekyll-post</id><content type="html" xml:base="https://gr0sabi.github.io/blog/my-first-jekyll-post/">&lt;h1 id=&quot;hello-world&quot;&gt;Hello World!&lt;/h1&gt;
-&lt;p&gt;This is my first &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; post hosted by &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;. The theme I use is &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/&quot;&gt;Minimal Mistakes&lt;/a&gt;, by &lt;a href=&quot;https://twitter.com/mmistakes&quot;&gt;Michael Rose&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;preferred-coding-ide&quot;&gt;Preferred Coding IDE&lt;/h2&gt;
-&lt;p&gt;I primarily use VS Code on Windows 10 for all coding projects. As an early adopter, the software is only getting better with time. There are a lot of great &lt;a href=&quot;https://code.visualstudio.com/docs/getstarted/introvideos#VSCode&quot;&gt;Videos&lt;/a&gt; that demonstrate proper setup and an overview of the features.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://gr0sabi.github.io/assets/images/vscode_scheme.JPG&quot; alt=&quot;Visual Studio Code with Hack and One Dark Pro Vivid Theme&quot; /&gt;&lt;/p&gt;
-&lt;figcaption&gt;My preferred font is Hack with a One Dark Pro Vivid Theme.&lt;/figcaption&gt;
-
-&lt;h3 id=&quot;my-favorite-feature&quot;&gt;My Favorite Feature&lt;/h3&gt;
-&lt;p&gt;One of my favorite features included with VS Code is the integrated Version Control. It makes using Git seemless and is a powerful feature. I’m really only telling you this because I want to make the post a bit longer so I can see what it looks like.&lt;/p&gt;
-
-&lt;h3 id=&quot;thanks&quot;&gt;Thanks&lt;/h3&gt;
-&lt;p&gt;Thanks for stopping by! The rest of this post is me messing around with Jekyll and the Theme.&lt;/p&gt;
-
-&lt;h1 id=&quot;content-flow&quot;&gt;Content Flow&lt;/h1&gt;
-&lt;p&gt;This following is filler text. It will be removed in the future once I am happy with my blog configuration.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://lorizzle.nl/?feed=1&quot;&gt;Lorem Ipsum Gangsta Text Generator&lt;/a&gt; for those interested where I got the below:&lt;/p&gt;
-
-&lt;h2 id=&quot;pot-ipsum-shizzlin-dizzle&quot;&gt;Pot ipsum shizzlin dizzle&lt;/h2&gt;
-
-&lt;p&gt;Pot ipsum shizzlin dizzle sit mah nizzle, gangsta adipiscing elit. Nullam rizzle velizzle, yippiyo volutpat, shizzle my nizzle crocodizzle that’s the shizzle, gravida vel, uhuh … yih!. Fo shizzle mah nizzle fo rizzle, mah home g-dizzle you son of a bizzle tortizzle. Own yo’ eros. Crackalackin bling bling dolor dapibus its fo rizzle tempizzle hizzle.&lt;/p&gt;
-
-&lt;h2 id=&quot;crazy-dapibizzle&quot;&gt;Crazy dapibizzle&lt;/h2&gt;
-
-&lt;p&gt;Crazy dapibizzle. Curabitur tellus break yo neck, yall, pretium rizzle, mattizzle get down get down, eleifend vitae, nunc. Gangsta ante my shizz primizzle nizzle faucibizzle shiznit gizzle izzle ultricizzle gizzle cubilia Crackalackin; Sizzle vitae break it down dizzle brizzle daahng dawg aliquizzle. Phasellizzle gangsta owned.&lt;/p&gt;
-
-&lt;h1 id=&quot;code-block-test&quot;&gt;Code Block Test&lt;/h1&gt;
-&lt;p&gt;Below is what code blocks look like using this theme.&lt;/p&gt;
-
-&lt;h2 id=&quot;testing-tiny-code-blocks&quot;&gt;Testing Tiny Code Blocks&lt;/h2&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Coding while using VS Code with an absurd amount of &quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;customizations and extensions is fun.&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;testing-larger-blocks-of-code-dicepy&quot;&gt;Testing Larger Blocks of Code (Dice.py)&lt;/h2&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;random&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dice_roll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Your number is: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;play_again&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Would you like to play again? &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;play_again&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'yes'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;play_again&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'no'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Game Over&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Input not recognized&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;play_again&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Would you like to play again? &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;game_start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Would you like to roll the dice? &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;game_start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'yes'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dice_roll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'too bad'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>John Grow</name></author><category term="github" /><category term="jekyll" /><category term="testing" /><summary type="html">Hello World! This is my first Jekyll post hosted by Github Pages. The theme I use is Minimal Mistakes, by Michael Rose.</summary></entry></feed>
+&lt;p&gt;Good luck, try harder, and DM me on &lt;a href=&quot;https://twitter.com/gr0sabi&quot;&gt;Twitter&lt;/a&gt; if you need anything.&lt;/p&gt;</content><author><name>John Grow</name></author><category term="oscp" /><category term="hacking" /><category term="penetration testing" /><category term="offensive security" /><category term="certification" /><summary type="html">Purpose I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is a lot of great information available on the Internet so I will make an honest effort not to sound like a broken record.</summary></entry></feed>
