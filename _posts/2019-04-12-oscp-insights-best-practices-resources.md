@@ -176,6 +176,6 @@ It took 6 days to get my results - 4 business days and a weekend. While it felt 
 <figcaption>Woohoo! I did it. :joy: </figcaption><br />
 
 # Final Thoughts
-I *really* enjoyed everything. The PWK course and the OSCP Exam Challenge was one of the most rewarding and humbling learning experiences I've professionally had. It's one of very few certifications that lets you feel part of a community that is passionate about Information Security. Now to really dig deep and go for OCSE!
+I *really* enjoyed everything. The PWK course and the OSCP Exam Challenge was one of the most rewarding and humbling learning experiences I've professionally had. It's one of very few certifications that lets you feel part of a community that is passionate about Information Security. Now to really dig deep and go for ~~OCSE~~ AWAE/OSWE!
 
 Good luck, try harder, and DM me on [Twitter](https://twitter.com/gr0sabi) if you need anything.
