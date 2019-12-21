@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.16.6 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.17.2 by Michael Rose
   Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -90,7 +90,7 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<!--[if IE ]>
+<!--[if IE]>
   <style>
     /* old IE unsupported flexbox fixes */
     .greedy-nav .site-title {
@@ -340,6 +340,7 @@
 
 
   9 minute read
+
 </p>
           
         </header>
@@ -506,8 +507,8 @@
 <p>I used a fully updated <a href="https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/">64-bit Kali VirtualBox VM</a> within my personal Windows 10 host machine, but I had the provided PWK Kali VMWare VM on standby, if needed. I personally did not have any issues with this configuration during the exam and is a chance I took against the recommendation of Offensive Security.</p>
 
 <h2 id="oscp-exam-challenge">OSCP Exam Challenge</h2>
-<p>I concur with others in the community and believe that utilizing <a href="https://github.com/codingo/Reconnoitre">Reconnoitre</a> while knocking out the Buffer Overflow is the most efficient way to begin the exam. Obviously, test and become familiar with Reconnoitre’s usage and outputs <strong>prior</strong> to the exam if you choose to use it. This is the Nmap command line that Reconnoitre used for a single machine, using a <code class="highlighter-rouge">--services</code> argument:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap -vv -Pn --disable-arp-ping -sS -A -sC -p- -T 3 -script-args=unsafe=1 -n -oN /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX.nmap -oX /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX_nmap_scan_import.xml 192.168.XX.XX
+<p>I concur with others in the community and believe that utilizing <a href="https://github.com/codingo/Reconnoitre">Reconnoitre</a> while knocking out the Buffer Overflow is the most efficient way to begin the exam. Obviously, test and become familiar with Reconnoitre’s usage and outputs <strong>prior</strong> to the exam if you choose to use it. This is the Nmap command line that Reconnoitre used for a single machine, using a <code class="language-plaintext highlighter-rouge">--services</code> argument:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap -vv -Pn --disable-arp-ping -sS -A -sC -p- -T 3 -script-args=unsafe=1 -n -oN /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX.nmap -oX /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX_nmap_scan_import.xml 192.168.XX.XX
 </code></pre></div></div>
 
 <p>In regards to the <a href="https://support.offensive-security.com/oscp-exam-guide/#section-1-exam-requirements"><em>single use</em></a> of Metasploit Modules and Meterpreter, I saved it until I <em>thoroughly</em> attempted every remaining machine <strong>manually</strong>. This strategy worked out in my favor, so it is good practice in the PWK Lab environment to attempt to compromise all machines manually.</p>
@@ -518,7 +519,7 @@
 
 <h3 id="progress-checklist">Progress Checklist</h3>
 <p>Within OneNote, I created a “Progress Checklist” tab, so I didn’t miss any major items. I modified it to fit the exam scope once I received the instructions. This was the basic structure:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Progress Checklist
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Progress Checklist
 ├── Box 1 - 192.168.X.X
 │   ├── local.txt
 │   │    ├── Screenshot with ipconfig/ifconfig
@@ -543,7 +544,7 @@
 <p>Don’t “YOLO” the report. It’s <em>part</em> of the challenge. Be meticulous and triple-check everything. Before you submit, reread the <a href="https://support.offensive-security.com/oscp-exam-guide/">Test Guide</a> and <a href="https://support.offensive-security.com/pwk-reporting/">PWK Reporting Guidelines</a> and check your formatting, security and compression.</p>
 
 <p>I used this report structure to include my findings of the exam, found on <a href="https://scund00r.com/all/oscp/2018/02/25/passing-oscp.html#exam">scund00r’s blog</a>:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Offensive Security Exam Penetration Test Report
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Offensive Security Exam Penetration Test Report
 │   ├── Introduction
 │   ├── Objective
 │   └── Scope
@@ -571,7 +572,7 @@
 <p><br></p>
 
 <h1 id="final-thoughts">Final Thoughts</h1>
-<p>I <em>really</em> enjoyed everything. The PWK course and the OSCP Exam Challenge was one of the most rewarding and humbling learning experiences I’ve professionally had. It’s one of very few certifications that lets you feel part of a community that is passionate about Information Security. Now to really dig deep and go for OCSE!</p>
+<p>I <em>really</em> enjoyed everything. The PWK course and the OSCP Exam Challenge was one of the most rewarding and humbling learning experiences I’ve professionally had. It’s one of very few certifications that lets you feel part of a community that is passionate about Information Security. Now to really dig deep and go for <del>OCSE</del> AWAE/OSWE!</p>
 
 <p>Good luck, try harder, and DM me on <a href="https://twitter.com/gr0sabi">Twitter</a> if you need anything.</p>
 
