@@ -14,6 +14,7 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'jekyll-seo-tag'
 gem "jekyll-remote-theme"
 gem "minimal-mistakes-jekyll"
+gem 'jekyll-include-cache'
 gem "github-pages", group: :jekyll_plugins
 #
 # If you have any other plugins, put them here!
