@@ -51,10 +51,8 @@
     {% endif %}
 
     <!--Tags-->
-      <i class="fas fa-tags" style="margin-right: 8px;"></i>
-      
       {% for tag in post.tags %}
-      <a href="/tags/#{{ tag }}" class="page__meta page__taxonomy-item" rel="tag">{{ tag }}</a>
+      <a href="/tags/#{{ tag }}" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>{{ tag }}</a>
       {% endfor %}
 
   </article>
