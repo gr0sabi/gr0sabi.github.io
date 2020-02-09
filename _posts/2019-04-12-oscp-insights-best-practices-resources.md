@@ -14,7 +14,7 @@ toc_label: "Table of Contents"
 toc_icon: "database"  # corresponding Font Awesome icon name (without fa prefix)
 toc_sticky: false
 ---
-![](/assets/images/oscp-post/offsec-oscp.png)
+![](/assets/images/oscp-post/offsec-oscp.png) 
 ## Purpose 
 I wrote this post to give back some of the insights I've discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is *a lot* of great information available on the Internet so I will make an honest effort not to sound like a broken record.
 
