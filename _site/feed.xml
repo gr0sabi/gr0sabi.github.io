@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2020-02-09T15:43:00-05:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">John Grow</title><subtitle>An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around.</subtitle><author><name>John Grow</name></author><entry><title type="html">OSCP: Insights, Best Practices, and Resources</title><link href="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/" rel="alternate" type="text/html" title="OSCP: Insights, Best Practices, and Resources" /><published>2019-04-12T00:00:00-04:00</published><updated>2019-04-12T00:00:00-04:00</updated><id>https://gr0sabi.github.io/security/oscp-insights-best-practices-resources</id><content type="html" xml:base="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/">&lt;p&gt;&lt;img src=&quot;/assets/images/oscp-post/offsec-oscp.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2020-02-09T16:38:45-05:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">John Grow</title><subtitle>An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around.</subtitle><author><name>John Grow</name></author><entry><title type="html">OSCP: Insights, Best Practices, and Resources</title><link href="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/" rel="alternate" type="text/html" title="OSCP: Insights, Best Practices, and Resources" /><published>2019-04-13T00:00:00-04:00</published><updated>2019-04-13T00:00:00-04:00</updated><id>https://gr0sabi.github.io/security/oscp-insights-best-practices-resources</id><content type="html" xml:base="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/">&lt;p&gt;&lt;img src=&quot;/assets/images/oscp-post/offsec-oscp.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;purpose&quot;&gt;Purpose&lt;/h2&gt;
 &lt;p&gt;I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is &lt;em&gt;a lot&lt;/em&gt; of great information available on the Internet so I will make an honest effort not to sound like a broken record.&lt;/p&gt;
 
@@ -13,25 +13,25 @@
 &lt;p&gt;Albeit a decent background in Information Technology, I felt inadequately prepared. My professional experience gave me some requisite knowledge in networking, development, and various operating system flavors. But, I needed more knowledge. Here are some of the things I did that I think served me well prior to PWK.&lt;/p&gt;
 
 &lt;h3 id=&quot;reading&quot;&gt;Reading&lt;/h3&gt;
-&lt;p&gt;I read (lurked) &lt;em&gt;nearly&lt;/em&gt; every post on the &lt;a href=&quot;https://www.reddit.com/r/oscp&quot;&gt;OSCP subreddit&lt;/a&gt;. I found it very useful to get into this community and get an understanding of some of the best practices (and struggles) associated with pursuing the certification. For the non-Redditor, sort by &lt;strong&gt;Top&lt;/strong&gt; and &lt;strong&gt;All Time&lt;/strong&gt; for great resources and sage advice.&lt;/p&gt;
+&lt;p&gt;I read (lurked) &lt;em&gt;nearly&lt;/em&gt; every post on the &lt;a href=&quot;https://www.reddit.com/r/oscp&quot; target=&quot;_blank&quot;&gt;OSCP subreddit&lt;/a&gt;. I found it very useful to get into this community and get an understanding of some of the best practices (and struggles) associated with pursuing the certification. For the non-Redditor, sort by &lt;strong&gt;Top&lt;/strong&gt; and &lt;strong&gt;All Time&lt;/strong&gt; for great resources and sage advice.&lt;/p&gt;
 
 &lt;p&gt;The following books I read and found useful, but can go beyond the scope of OSCP:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://amzn.to/2I78dB2&quot;&gt;Grey Hat Hacking&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://amzn.to/2D25qF0&quot;&gt;The Web Application Hacker’s Handbook, 2nd Ed.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://amzn.to/2UzD1jR&quot;&gt;Violent Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://amzn.to/2IaXF3Q&quot;&gt;Black Hat Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://amzn.to/2I78dB2&quot; target=&quot;_blank&quot;&gt;Grey Hat Hacking&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://amzn.to/2D25qF0&quot; target=&quot;_blank&quot;&gt;The Web Application Hacker’s Handbook, 2nd Ed.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://amzn.to/2UzD1jR&quot; target=&quot;_blank&quot;&gt;Violent Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://amzn.to/2IaXF3Q&quot; target=&quot;_blank&quot;&gt;Black Hat Python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;sub&gt;&lt;strong&gt;Note&lt;/strong&gt;:  I scooped up a couple Humble Book Bundles from &lt;a href=&quot;https://www.goodreads.com/list/show/126519.Humble_Book_Bundle_Cybersecurity_2_0_by_Wiley&quot;&gt;Wiley&lt;/a&gt; and &lt;a href=&quot;https://www.goodreads.com/list/show/130690.humble_bundle_hacking_for_the_holidays&quot;&gt;No Starch Press&lt;/a&gt; on Hacking, so keep your eyes peeled for those. I got around 30 books for $30 USD, and a sizable portion of the purchase goes to charity. Most of the books were beyond the scope of OSCP, but were good reading, and work well to get in the proper mindset.&lt;/sub&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;videos&quot;&gt;Videos&lt;/h3&gt;
-&lt;p&gt;I watched every &lt;a href=&quot;https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA/videos&quot;&gt;ippsec YouTube&lt;/a&gt; video and took notes on tools, tips, commands and methodology. This takes a lot of time - but it’s worth every second. If I didn’t understand an exploit or method, I googled it and did some reading. This is phenomenal for seeing an experienced penetration testing methodology in action.&lt;/p&gt;
+&lt;p&gt;I watched every &lt;a href=&quot;https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA/videos&quot; target=&quot;_blank&quot;&gt;ippsec YouTube&lt;/a&gt; video and took notes on tools, tips, commands and methodology. This takes a lot of time - but it’s worth every second. If I didn’t understand an exploit or method, I googled it and did some reading. This is phenomenal for seeing an experienced penetration testing methodology in action.&lt;/p&gt;
 
 &lt;h3 id=&quot;hackthebox&quot;&gt;HackTheBox&lt;/h3&gt;
-&lt;p&gt;Another invaluable resource to go along side of &lt;a href=&quot;https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA/videos&quot;&gt;ippsec’s videos&lt;/a&gt; is &lt;a href=&quot;https://www.hackthebox.eu/&quot;&gt;HackTheBox&lt;/a&gt;. I purchased a VIP membership for about 6 months prior to PWK and spent time attacking their boxes and doing various challenges. &lt;em&gt;This is extremely useful.&lt;/em&gt; It’s true that some of the machines are unlike the PWK network because HTB can be kind of CTF-oriented and/or out-of-scope within the &lt;a href=&quot;https://www.offensive-security.com/information-security-training/penetration-testing-training-kali-linux/&quot;&gt;PWK&lt;/a&gt; material, but that does not matter in my opinion. Working within the Kali environment, learning the tools and developing a solid pen-testing methodology is what matters here.&lt;/p&gt;
+&lt;p&gt;Another invaluable resource to go along side of &lt;a href=&quot;https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA/videos&quot; target=&quot;_blank&quot;&gt;ippsec’s videos&lt;/a&gt; is &lt;a href=&quot;https://www.hackthebox.eu/&quot; target=&quot;_blank&quot;&gt;HackTheBox&lt;/a&gt;. I purchased a VIP membership for about 6 months prior to PWK and spent time attacking their boxes and doing various challenges. &lt;em&gt;This is extremely useful.&lt;/em&gt; It’s true that some of the machines are unlike the PWK network because HTB can be kind of CTF-oriented and/or out-of-scope within the &lt;a href=&quot;https://www.offensive-security.com/information-security-training/penetration-testing-training-kali-linux/&quot; target=&quot;_blank&quot;&gt;PWK&lt;/a&gt; material, but that does not matter in my opinion. Working within the Kali environment, learning the tools and developing a solid pen-testing methodology is what matters here.&lt;/p&gt;
 
-&lt;p&gt;&lt;sub&gt;&lt;strong&gt;Note&lt;/strong&gt;:  I did not use &lt;a href=&quot;https://www.vulnhub.com/&quot;&gt;VulnHub&lt;/a&gt;, but I &lt;a href=&quot;https://www.abatchy.com/2017/02/oscp-like-vulnhub-vms&quot;&gt;read&lt;/a&gt; that some of the machines are similar to exploiting some of the PWK Lab machines.&lt;/sub&gt;&lt;/p&gt;
+&lt;p&gt;&lt;sub&gt;&lt;strong&gt;Note&lt;/strong&gt;:  I did not use &lt;a href=&quot;https://www.vulnhub.com/&quot; target=&quot;_blank&quot;&gt;VulnHub&lt;/a&gt;, but I &lt;a href=&quot;https://www.abatchy.com/2017/02/oscp-like-vulnhub-vms&quot; target=&quot;_blank&quot;&gt;read&lt;/a&gt; that some of the machines are similar to exploiting some of the PWK Lab machines.&lt;/sub&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;note-taking&quot;&gt;Note-Taking&lt;/h3&gt;
 
@@ -46,33 +46,33 @@
 &lt;p&gt;Below are excellent online resources that I utilized:&lt;/p&gt;
 
 &lt;h3 id=&quot;linux&quot;&gt;Linux&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/&quot;&gt;Basic Linux Enumeration by g0tmi1k&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://guif.re/linuxeop&quot;&gt;Linux Privilege Escalation by Guifre Ruiz&lt;/a&gt; &lt;br /&gt;
-&lt;a href=&quot;https://gtfobins.github.io/&quot;&gt;GTFOBins Project&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/&quot; target=&quot;_blank&quot;&gt;Basic Linux Enumeration by g0tmi1k&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://guif.re/linuxeop&quot; target=&quot;_blank&quot;&gt;Linux Privilege Escalation by Guifre Ruiz&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://gtfobins.github.io/&quot; target=&quot;_blank&quot;&gt;GTFOBins Project&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;windows&quot;&gt;Windows&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.fuzzysecurity.com/tutorials/16.html&quot;&gt;Windows Privilege Escalation Fundamentals by FuzzySecurity&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://guif.re/windowseop&quot;&gt;Windows Privilege EoP by Guifre Ruiz&lt;/a&gt; &lt;br /&gt;
-&lt;a href=&quot;https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/&quot;&gt;Windows Privilege Escalation Guide by Absolomb&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://lolbas-project.github.io/#&quot;&gt;LOLBAS Project&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.fuzzysecurity.com/tutorials/16.html&quot; target=&quot;_blank&quot;&gt;Windows Privilege Escalation Fundamentals by FuzzySecurity&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://guif.re/windowseop&quot; target=&quot;_blank&quot;&gt;Windows Privilege EoP by Guifre Ruiz&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/&quot; target=&quot;_blank&quot;&gt;Windows Privilege Escalation Guide by Absolomb&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://lolbas-project.github.io/#&quot; target=&quot;_blank&quot;&gt;LOLBAS Project&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;pentesting&quot;&gt;Pentesting&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://bitvijays.github.io/index.html&quot;&gt;The Magic of Learning&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://pen-testing.sans.org/resources/downloads&quot;&gt;SANS Penetration Testing Resources&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://artkond.com/2017/03/23/pivoting-guide/&quot;&gt;A Red Teamer’s Guide to Pivoting by Artem Kondratenko&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://bitvijays.github.io/index.html&quot; target=&quot;_blank&quot;&gt;The Magic of Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://pen-testing.sans.org/resources/downloads&quot; target=&quot;_blank&quot;&gt;SANS Penetration Testing Resources&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://artkond.com/2017/03/23/pivoting-guide/&quot; target=&quot;_blank&quot;&gt;A Red Teamer’s Guide to Pivoting by Artem Kondratenko&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;stack-based-buffer-overflow&quot;&gt;Stack-Based Buffer Overflow&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/justinsteven/dostackbufferoverflowgood&quot;&gt;The Presentation and Tutorial for Cross-Site Scripters Who Can’t Stack Buffer Overflow Good and Want to Do Other Stuff Good Too&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://veteransec.com/2018/09/10/32-bit-windows-buffer-overflows-made-easy/&quot;&gt;VeteranSec’s 32-Bit Windows Buffer Overflows Made Easy&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/&quot;&gt;Exploit Writing Tutorial: Stack Based Overflows by Corelanc0d3r&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.corelan.be/index.php/2011/07/14/mona-py-the-manual/&quot;&gt;Mona.py - The Manual by Corelanc0d3r&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/justinsteven/dostackbufferoverflowgood&quot; target=&quot;_blank&quot;&gt;The Presentation and Tutorial for Cross-Site Scripters Who Can’t Stack Buffer Overflow Good and Want to Do Other Stuff Good Too&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://veteransec.com/2018/09/10/32-bit-windows-buffer-overflows-made-easy/&quot; target=&quot;_blank&quot;&gt;VeteranSec’s 32-Bit Windows Buffer Overflows Made Easy&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/&quot; target=&quot;_blank&quot;&gt;Exploit Writing Tutorial: Stack Based Overflows by Corelanc0d3r&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.corelan.be/index.php/2011/07/14/mona-py-the-manual/&quot; target=&quot;_blank&quot;&gt;Mona.py - The Manual by Corelanc0d3r&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;oscp-specific-guides&quot;&gt;OSCP Specific Guides&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://scund00r.com/all/oscp/2018/02/25/passing-oscp.html&quot;&gt;Passing OSCP by Scund00r&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://awakened1712.github.io/oscp/oscp-lfi-rfi/&quot;&gt;OSCP: RFI and LFI by Awakened&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://awakened1712.github.io/oscp/oscp-transfer-files/&quot;&gt;OSCP: Transfer Files from Kali to the Target Machine by Awakened&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://sushant747.gitbooks.io/total-oscp-guide/&quot;&gt;Total OSCP Guide by Sushant747&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/rewardone/OSCPRepo&quot;&gt;OSCP Repo by Rewardone&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://scund00r.com/all/oscp/2018/02/25/passing-oscp.html&quot; target=&quot;_blank&quot;&gt;Passing OSCP by Scund00r&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://awakened1712.github.io/oscp/oscp-lfi-rfi/&quot; target=&quot;_blank&quot;&gt;OSCP: RFI and LFI by Awakened&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://awakened1712.github.io/oscp/oscp-transfer-files/&quot; target=&quot;_blank&quot;&gt;OSCP: Transfer Files from Kali to the Target Machine by Awakened&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://sushant747.gitbooks.io/total-oscp-guide/&quot; target=&quot;_blank&quot;&gt;Total OSCP Guide by Sushant747&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/rewardone/OSCPRepo&quot; target=&quot;_blank&quot;&gt;OSCP Repo by Rewardone&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;my-experience-with-pwk&quot;&gt;My Experience with PWK&lt;/h2&gt;
 &lt;p&gt;I signed up for the 60 day lab time, of which life only allowed probably 35-40 days of that. I took a week of leave from work to spend dedicated time doing all the exercises and course material initially. The course materials (Lectures and Course Guide) teach you everything you need to know to successfully compromise machines with Kali Linux within the Lab network.&lt;/p&gt;
@@ -89,7 +89,7 @@
 &lt;h2 id=&quot;exam-strategy&quot;&gt;Exam Strategy&lt;/h2&gt;
 &lt;p&gt;Naturally, I will not talk about what’s on the exam but focus on key points.&lt;/p&gt;
 
-&lt;p&gt;Thoroughly read and completely understand the &lt;a href=&quot;https://support.offensive-security.com/oscp-exam-guide/&quot;&gt;test guide&lt;/a&gt; prior to sitting the challenge. &lt;em&gt;I’ve noticed it is updated fairly regularly.&lt;/em&gt; Reading about other experiences, simple errors on the report and missing key details on the guidance have led to a failure, despite fully compromising all machines.&lt;/p&gt;
+&lt;p&gt;Thoroughly read and completely understand the &lt;a href=&quot;https://support.offensive-security.com/oscp-exam-guide/&quot; target=&quot;_blank&quot;&gt;test guide&lt;/a&gt; prior to sitting the challenge. &lt;em&gt;I’ve noticed it is updated fairly regularly.&lt;/em&gt; Reading about other experiences, simple errors on the report and missing key details on the guidance have led to a failure, despite fully compromising all machines.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Food&lt;/em&gt;. I planned my food prior to the exam to give me one less thing to focus on that day. I chose food and beverages that would keep my energy levels up and not make me lethargic.&lt;/p&gt;
 
@@ -100,16 +100,16 @@
 &lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/LTYT5GTIiAMBa/giphy.gif&quot; width=&quot;50%&quot; alt=&quot;Sleepy&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;testing-vm&quot;&gt;Testing VM&lt;/h3&gt;
-&lt;p&gt;I used a fully updated &lt;a href=&quot;https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/&quot;&gt;64-bit Kali VirtualBox VM&lt;/a&gt; within my personal Windows 10 host machine, but I had the provided PWK Kali VMWare VM on standby, if needed. I personally did not have any issues with this configuration during the exam and is a chance I took against the recommendation of Offensive Security.&lt;/p&gt;
+&lt;p&gt;I used a fully updated &lt;a href=&quot;https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/&quot; target=&quot;_blank&quot;&gt;64-bit Kali VirtualBox VM&lt;/a&gt; within my personal Windows 10 host machine, but I had the provided PWK Kali VMWare VM on standby, if needed. I personally did not have any issues with this configuration during the exam and is a chance I took against the recommendation of Offensive Security.&lt;/p&gt;
 
 &lt;h3 id=&quot;oscp-exam-challenge&quot;&gt;OSCP Exam Challenge&lt;/h3&gt;
-&lt;p&gt;I concur with others in the community and believe that utilizing &lt;a href=&quot;https://github.com/codingo/Reconnoitre&quot;&gt;Reconnoitre&lt;/a&gt; while knocking out the Buffer Overflow is the most efficient way to begin the exam. Obviously, test and become familiar with Reconnoitre’s usage and outputs &lt;strong&gt;prior&lt;/strong&gt; to the exam if you choose to use it. This is the Nmap command line that Reconnoitre used for a single machine, using a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--services&lt;/code&gt; argument:&lt;/p&gt;
+&lt;p&gt;I concur with others in the community and believe that utilizing &lt;a href=&quot;https://github.com/codingo/Reconnoitre&quot; target=&quot;_blank&quot;&gt;Reconnoitre&lt;/a&gt; while knocking out the Buffer Overflow is the most efficient way to begin the exam. Obviously, test and become familiar with Reconnoitre’s usage and outputs &lt;strong&gt;prior&lt;/strong&gt; to the exam if you choose to use it. This is the Nmap command line that Reconnoitre used for a single machine, using a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--services&lt;/code&gt; argument:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nmap -vv -Pn --disable-arp-ping -sS -A -sC -p- -T 3 -script-args=unsafe=1 -n -oN /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX.nmap -oX /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX_nmap_scan_import.xml 192.168.XX.XX
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;In regards to the &lt;a href=&quot;https://support.offensive-security.com/oscp-exam-guide/#section-1-exam-requirements&quot;&gt;&lt;em&gt;single use&lt;/em&gt;&lt;/a&gt; of Metasploit Modules and Meterpreter, I saved it until I &lt;em&gt;thoroughly&lt;/em&gt; attempted every remaining machine &lt;strong&gt;manually&lt;/strong&gt;. This strategy worked out in my favor, so it is good practice in the PWK Lab environment to attempt to compromise all machines manually.&lt;/p&gt;
+&lt;p&gt;In regards to the &lt;a href=&quot;https://support.offensive-security.com/oscp-exam-guide/#section-1-exam-requirements&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;single use&lt;/em&gt;&lt;/a&gt; of Metasploit Modules and Meterpreter, I saved it until I &lt;em&gt;thoroughly&lt;/em&gt; attempted every remaining machine &lt;strong&gt;manually&lt;/strong&gt;. This strategy worked out in my favor, so it is good practice in the PWK Lab environment to attempt to compromise all machines manually.&lt;/p&gt;
 
-&lt;p&gt;I recorded the entire exam with &lt;a href=&quot;https://obsproject.com/&quot;&gt;OBS&lt;/a&gt;, following the advice of many. This was &lt;em&gt;very&lt;/em&gt; useful, as I missed a couple screenshots that I thought were useful for the report.&lt;/p&gt;
+&lt;p&gt;I recorded the entire exam with &lt;a href=&quot;https://obsproject.com/&quot; target=&quot;_blank&quot;&gt;OBS&lt;/a&gt;, following the advice of many. This was &lt;em&gt;very&lt;/em&gt; useful, as I missed a couple screenshots that I thought were useful for the report.&lt;/p&gt;
 
 &lt;p&gt;The proctors were not an issue and were professional and unobtrusive. The webcam and communication with them was smooth, other than a single webcam restart.&lt;/p&gt;
 
@@ -135,11 +135,11 @@
 
 &lt;h3 id=&quot;report-tips&quot;&gt;Report Tips&lt;/h3&gt;
 
-&lt;p&gt;Pre-stage your report. You can prep a decent portion of the report prior to the exam. This will save you some time after your exam ends. Even though I did this, I still spent roughly 10 hours compiling my 56 page report for submission. I did not try to reinvent the wheel and used the &lt;a href=&quot;https://support.offensive-security.com/pwk-reporting/&quot;&gt;recommended template&lt;/a&gt;, only modifying it to fit the exam requirements.&lt;/p&gt;
+&lt;p&gt;Pre-stage your report. You can prep a decent portion of the report prior to the exam. This will save you some time after your exam ends. Even though I did this, I still spent roughly 10 hours compiling my 56 page report for submission. I did not try to reinvent the wheel and used the &lt;a href=&quot;https://support.offensive-security.com/pwk-reporting/&quot; target=&quot;_blank&quot;&gt;recommended template&lt;/a&gt;, only modifying it to fit the exam requirements.&lt;/p&gt;
 
-&lt;p&gt;Don’t “YOLO” the report. It’s &lt;em&gt;part&lt;/em&gt; of the challenge. Be meticulous and triple-check everything. Before you submit, reread the &lt;a href=&quot;https://support.offensive-security.com/oscp-exam-guide/&quot;&gt;Test Guide&lt;/a&gt; and &lt;a href=&quot;https://support.offensive-security.com/pwk-reporting/&quot;&gt;PWK Reporting Guidelines&lt;/a&gt; and check your formatting, security and compression.&lt;/p&gt;
+&lt;p&gt;Don’t “YOLO” the report. It’s &lt;em&gt;part&lt;/em&gt; of the challenge. Be meticulous and triple-check everything. Before you submit, reread the &lt;a href=&quot;https://support.offensive-security.com/oscp-exam-guide/&quot; target=&quot;_blank&quot;&gt;Test Guide&lt;/a&gt; and &lt;a href=&quot;https://support.offensive-security.com/pwk-reporting/&quot; target=&quot;_blank&quot;&gt;PWK Reporting Guidelines&lt;/a&gt; and check your formatting, security and compression.&lt;/p&gt;
 
-&lt;p&gt;I used this report structure to include my findings of the exam, found on &lt;a href=&quot;https://scund00r.com/all/oscp/2018/02/25/passing-oscp.html#exam&quot;&gt;scund00r’s blog&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;I used this report structure to include my findings of the exam, found on &lt;a href=&quot;https://scund00r.com/all/oscp/2018/02/25/passing-oscp.html#exam&quot; target=&quot;_blank&quot;&gt;scund00r’s blog&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Offensive Security Exam Penetration Test Report
 │   ├── Introduction
 │   ├── Objective
@@ -170,4 +170,4 @@
 &lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
 &lt;p&gt;I &lt;em&gt;really&lt;/em&gt; enjoyed everything. The PWK course and the OSCP Exam Challenge was one of the most rewarding and humbling learning experiences I’ve professionally had. It’s one of very few certifications that lets you feel part of a community that is passionate about Information Security. Now to really dig deep and go for &lt;del&gt;OCSE&lt;/del&gt; AWAE/OSWE!&lt;/p&gt;
 
-&lt;p&gt;Good luck, try harder, and DM me on &lt;a href=&quot;https://twitter.com/gr0sabi&quot;&gt;Twitter&lt;/a&gt; if you need anything.&lt;/p&gt;</content><author><name>John Grow</name></author><category term="oscp" /><category term="hacking" /><category term="penetration testing" /><category term="offensive security" /><category term="certification" /><summary type="html">I wrote this post to give back some of the insights I've discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is *a lot* of great information available on the Internet so I will make an honest effort not to sound like a broken record.</summary></entry></feed>
+&lt;p&gt;Good luck, try harder, and DM me on &lt;a href=&quot;https://twitter.com/gr0sabi&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt; if you need anything.&lt;/p&gt;</content><author><name>John Grow</name></author><category term="oscp" /><category term="hacking" /><category term="penetration testing" /><category term="offensive security" /><category term="certification" /><summary type="html">I wrote this post to give back some of the insights I've discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices.</summary></entry></feed>
