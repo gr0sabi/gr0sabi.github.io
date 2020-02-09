@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>OSCP: Insights, Best Practices, and Resources | Security Notes</title>
-<meta name="description" content="Purpose I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is a lot of great information available on the Internet so I will make an honest effort not to sound like a broken record.  ">
+<!-- begin _includes/seo.html --><title>OSCP: Insights, Best Practices, and Resources |</title>
+<meta name="description" content="I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is a lot of great information available on the Internet so I will make an honest effort not to sound like a broken record. ">
 
 
   <meta name="author" content="John Grow">
@@ -18,24 +18,28 @@
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Security Notes">
+<meta property="og:site_name" content="">
 <meta property="og:title" content="OSCP: Insights, Best Practices, and Resources">
 <meta property="og:url" content="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/">
 
 
-  <meta property="og:description" content="Purpose I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is a lot of great information available on the Internet so I will make an honest effort not to sound like a broken record.  ">
+  <meta property="og:description" content="I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is a lot of great information available on the Internet so I will make an honest effort not to sound like a broken record. ">
 
 
+
+  <meta property="og:image" content="https://gr0sabi.github.io/assets/images/oscp-post/offsec-oscp.png">
 
 
 
   <meta name="twitter:site" content="@gr0sabi">
   <meta name="twitter:title" content="OSCP: Insights, Best Practices, and Resources">
-  <meta name="twitter:description" content="Purpose I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is a lot of great information available on the Internet so I will make an honest effort not to sound like a broken record.  ">
+  <meta name="twitter:description" content="I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is a lot of great information available on the Internet so I will make an honest effort not to sound like a broken record. ">
   <meta name="twitter:url" content="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/">
 
   
     <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://gr0sabi.github.io/assets/images/oscp-post/offsec-oscp.png">
     
   
 
@@ -78,7 +82,7 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Security Notes Feed">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -115,7 +119,7 @@
 
   </head>
 
-  <body class="layout--single">
+  <body class="layout--single wide">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -136,10 +140,10 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-          <a class="site-logo" href="/"><img src="/assets/images/gr0_tr.png" alt=""></a>
+          <a class="site-logo" href="/"><img src="/assets/images/header.png" alt=""></a>
         
         <a class="site-title" href="/">
-          Security Notes
+           
           
         </a>
         <ul class="visible-links"></ul>
@@ -238,6 +242,8 @@
       
         
           
+            <li><a href="mailto:john@gr0sabi.dev" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
         
           
         
@@ -324,7 +330,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="OSCP: Insights, Best Practices, and Resources">
-    <meta itemprop="description" content="PurposeI wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is a lot of great information available on the Internet so I will make an honest effort not to sound like a broken record.">
+    <meta itemprop="description" content="I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is a lot of great information available on the Internet so I will make an honest effort not to sound like a broken record.">
     <meta itemprop="datePublished" content="2019-04-12T00:00:00-04:00">
     
 
@@ -348,76 +354,21 @@
 
       <section class="page__content" itemprop="text">
         
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title">
-<i class="fas fa-database"></i> Table of Contents</h4></header>
-              <ul class="toc__menu">
-  <li>
-<a href="#purpose">Purpose</a>
-    <ul>
-      <li><a href="#a-little-about-me">A Little About Me</a></li>
-    </ul>
-  </li>
-  <li>
-<a href="#pre-pwk-preparation">Pre-PWK Preparation</a>
-    <ul>
-      <li><a href="#reading">Reading</a></li>
-      <li><a href="#videos">Videos</a></li>
-      <li><a href="#hackthebox">HackTheBox</a></li>
-      <li><a href="#note-taking">Note-Taking</a></li>
-    </ul>
-  </li>
-  <li>
-<a href="#useful-resources">Useful Resources</a>
-    <ul>
-      <li><a href="#linux">Linux</a></li>
-      <li><a href="#windows">Windows</a></li>
-      <li><a href="#pentesting">Pentesting</a></li>
-      <li><a href="#stack-based-buffer-overflow">Stack-Based Buffer Overflow</a></li>
-      <li><a href="#oscp-specific-guides">OSCP Specific Guides</a></li>
-    </ul>
-  </li>
-  <li>
-<a href="#my-experience-with-pwk">My Experience with PWK</a>
-    <ul>
-      <li><a href="#forum-and-independent-research">Forum and Independent Research</a></li>
-    </ul>
-  </li>
-  <li>
-<a href="#exam-strategy">Exam Strategy</a>
-    <ul>
-      <li><a href="#testing-vm">Testing VM</a></li>
-      <li>
-<a href="#oscp-exam-challenge">OSCP Exam Challenge</a>
-        <ul>
-          <li><a href="#progress-checklist">Progress Checklist</a></li>
-        </ul>
-      </li>
-      <li><a href="#report-tips">Report Tips</a></li>
-    </ul>
-  </li>
-  <li><a href="#results">Results</a></li>
-  <li><a href="#final-thoughts">Final Thoughts</a></li>
-</ul>
-
-            </nav>
-          </aside>
-        
-        <h1 id="purpose">Purpose</h1>
+        <p><img src="/assets/images/oscp-post/offsec-oscp.png" alt=""></p>
+<h2 id="purpose">Purpose</h2>
 <p>I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is <em>a lot</em> of great information available on the Internet so I will make an honest effort not to sound like a broken record.</p>
 
-<h2 id="a-little-about-me">A Little About Me</h2>
+<h3 id="a-little-about-me">A Little About Me</h3>
 <p>Going into the certification I held a B.S. in Information and Computer Science and was actively certified a CCNA, CEH, Sec+, Net+ and A+. In the IT realm, I’ve got Network Engineering experience with mobile Cisco deployments and System Administration experience on both Linux and Windows Domains. But, like most readers of this post, <em>I wanted to step it up a notch</em>.</p>
 
 <p><sub><strong>Note</strong>:  I feel that CEH did <em>very little</em> to prepare me for OSCP. It’s essentially a requirement for my current employment, as an <a href="https://iase.disa.mil/iawip/pages/iabaseline.aspx">approved baseline certification</a>. CCNA was more useful, in my opinion.</sub></p>
 
 <p><img src="https://media.giphy.com/media/NFA61GS9qKZ68/giphy.gif" width="50%" alt="Strategy"></p>
 
-<h1 id="pre-pwk-preparation">Pre-PWK Preparation</h1>
+<h2 id="pre-pwk-preparation">Pre-PWK Preparation</h2>
 <p>Albeit a decent background in Information Technology, I felt inadequately prepared. My professional experience gave me some requisite knowledge in networking, development, and various operating system flavors. But, I needed more knowledge. Here are some of the things I did that I think served me well prior to PWK.</p>
 
-<h2 id="reading">Reading</h2>
+<h3 id="reading">Reading</h3>
 <p>I read (lurked) <em>nearly</em> every post on the <a href="https://www.reddit.com/r/oscp">OSCP subreddit</a>. I found it very useful to get into this community and get an understanding of some of the best practices (and struggles) associated with pursuing the certification. For the non-Redditor, sort by <strong>Top</strong> and <strong>All Time</strong> for great resources and sage advice.</p>
 
 <p>The following books I read and found useful, but can go beyond the scope of OSCP:</p>
@@ -430,15 +381,15 @@
 
 <p><sub><strong>Note</strong>:  I scooped up a couple Humble Book Bundles from <a href="https://www.goodreads.com/list/show/126519.Humble_Book_Bundle_Cybersecurity_2_0_by_Wiley">Wiley</a> and <a href="https://www.goodreads.com/list/show/130690.humble_bundle_hacking_for_the_holidays">No Starch Press</a> on Hacking, so keep your eyes peeled for those. I got around 30 books for $30 USD, and a sizable portion of the purchase goes to charity. Most of the books were beyond the scope of OSCP, but were good reading, and work well to get in the proper mindset.</sub></p>
 
-<h2 id="videos">Videos</h2>
+<h3 id="videos">Videos</h3>
 <p>I watched every <a href="https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA/videos">ippsec YouTube</a> video and took notes on tools, tips, commands and methodology. This takes a lot of time - but it’s worth every second. If I didn’t understand an exploit or method, I googled it and did some reading. This is phenomenal for seeing an experienced penetration testing methodology in action.</p>
 
-<h2 id="hackthebox">HackTheBox</h2>
+<h3 id="hackthebox">HackTheBox</h3>
 <p>Another invaluable resource to go along side of <a href="https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA/videos">ippsec’s videos</a> is <a href="https://www.hackthebox.eu/">HackTheBox</a>. I purchased a VIP membership for about 6 months prior to PWK and spent time attacking their boxes and doing various challenges. <em>This is extremely useful.</em> It’s true that some of the machines are unlike the PWK network because HTB can be kind of CTF-oriented and/or out-of-scope within the <a href="https://www.offensive-security.com/information-security-training/penetration-testing-training-kali-linux/">PWK</a> material, but that does not matter in my opinion. Working within the Kali environment, learning the tools and developing a solid pen-testing methodology is what matters here.</p>
 
 <p><sub><strong>Note</strong>:  I did not use <a href="https://www.vulnhub.com/">VulnHub</a>, but I <a href="https://www.abatchy.com/2017/02/oscp-like-vulnhub-vms">read</a> that some of the machines are similar to exploiting some of the PWK Lab machines.</sub></p>
 
-<h2 id="note-taking">Note-Taking</h2>
+<h3 id="note-taking">Note-Taking</h3>
 
 <p><em>OneNote</em>. I used OneNote extensively with all the HTB machines and got very familiar with the application. Within OneNote I created a PenTest Notebook that I could put all my favorite commands, shells, tools, overflow processes, screenshots, etc. Basically, anything I found myself looking up repetitively and needing to copy/paste frequently.</p>
 
@@ -447,39 +398,39 @@
   <li>It has web and mobile applications that you can use remotely.</li>
 </ul>
 
-<h1 id="useful-resources">Useful Resources</h1>
+<h2 id="useful-resources">Useful Resources</h2>
 <p>Below are excellent online resources that I utilized:</p>
 
-<h2 id="linux">Linux</h2>
+<h3 id="linux">Linux</h3>
 <p><a href="https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/">Basic Linux Enumeration by g0tmi1k</a><br>
 <a href="https://guif.re/linuxeop">Linux Privilege Escalation by Guifre Ruiz</a> <br>
 <a href="https://gtfobins.github.io/">GTFOBins Project</a></p>
 
-<h2 id="windows">Windows</h2>
+<h3 id="windows">Windows</h3>
 <p><a href="http://www.fuzzysecurity.com/tutorials/16.html">Windows Privilege Escalation Fundamentals by FuzzySecurity</a><br>
 <a href="https://guif.re/windowseop">Windows Privilege EoP by Guifre Ruiz</a> <br>
 <a href="https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/">Windows Privilege Escalation Guide by Absolomb</a><br>
 <a href="https://lolbas-project.github.io/#">LOLBAS Project</a></p>
 
-<h2 id="pentesting">Pentesting</h2>
+<h3 id="pentesting">Pentesting</h3>
 <p><a href="https://bitvijays.github.io/index.html">The Magic of Learning</a><br>
 <a href="https://pen-testing.sans.org/resources/downloads">SANS Penetration Testing Resources</a><br>
 <a href="https://artkond.com/2017/03/23/pivoting-guide/">A Red Teamer’s Guide to Pivoting by Artem Kondratenko</a></p>
 
-<h2 id="stack-based-buffer-overflow">Stack-Based Buffer Overflow</h2>
+<h3 id="stack-based-buffer-overflow">Stack-Based Buffer Overflow</h3>
 <p><a href="https://github.com/justinsteven/dostackbufferoverflowgood">The Presentation and Tutorial for Cross-Site Scripters Who Can’t Stack Buffer Overflow Good and Want to Do Other Stuff Good Too</a><br>
 <a href="https://veteransec.com/2018/09/10/32-bit-windows-buffer-overflows-made-easy/">VeteranSec’s 32-Bit Windows Buffer Overflows Made Easy</a><br>
 <a href="https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/">Exploit Writing Tutorial: Stack Based Overflows by Corelanc0d3r</a><br>
 <a href="https://www.corelan.be/index.php/2011/07/14/mona-py-the-manual/">Mona.py - The Manual by Corelanc0d3r</a></p>
 
-<h2 id="oscp-specific-guides">OSCP Specific Guides</h2>
+<h3 id="oscp-specific-guides">OSCP Specific Guides</h3>
 <p><a href="https://scund00r.com/all/oscp/2018/02/25/passing-oscp.html">Passing OSCP by Scund00r</a><br>
 <a href="https://awakened1712.github.io/oscp/oscp-lfi-rfi/">OSCP: RFI and LFI by Awakened</a><br>
 <a href="https://awakened1712.github.io/oscp/oscp-transfer-files/">OSCP: Transfer Files from Kali to the Target Machine by Awakened</a><br>
 <a href="https://sushant747.gitbooks.io/total-oscp-guide/">Total OSCP Guide by Sushant747</a><br>
 <a href="https://github.com/rewardone/OSCPRepo">OSCP Repo by Rewardone</a></p>
 
-<h1 id="my-experience-with-pwk">My Experience with PWK</h1>
+<h2 id="my-experience-with-pwk">My Experience with PWK</h2>
 <p>I signed up for the 60 day lab time, of which life only allowed probably 35-40 days of that. I took a week of leave from work to spend dedicated time doing all the exercises and course material initially. The course materials (Lectures and Course Guide) teach you everything you need to know to successfully compromise machines with Kali Linux within the Lab network.</p>
 
 <p>Afterwards, I was able to fully compromise about 90% of the machines. I took field notes and screenshots on every machine as if I were going to write a report on them. I created a map of the entire lab network(s) so I could track my overall progress and coverage.</p>
@@ -488,10 +439,10 @@
 
 <p><sub><strong>Note</strong>:  I did <em>not</em> submit a lab report because I did not want to writeup 10 machines for a 5 point differential. I reasoned that my study time would be better spent in the lab. Yet, I did do <em>all exercises</em> and recorded my answers. I recommend that if you have the time, do the lab report and submit it.</sub></p>
 
-<h2 id="forum-and-independent-research">Forum and Independent Research</h2>
+<h3 id="forum-and-independent-research">Forum and Independent Research</h3>
 <p>Whenever I found myself 100% stuck with no other resource, I utilized the OffSec forums, which can more or less guide you in a better direction. Obviously, it’s better to not use it because it can be sometimes a little too “hinty”. You <strong>must</strong> be able to <em>eventually</em> research independently and not lean on the OffSec Student forum.</p>
 
-<h1 id="exam-strategy">Exam Strategy</h1>
+<h2 id="exam-strategy">Exam Strategy</h2>
 <p>Naturally, I will not talk about what’s on the exam but focus on key points.</p>
 
 <p>Thoroughly read and completely understand the <a href="https://support.offensive-security.com/oscp-exam-guide/">test guide</a> prior to sitting the challenge. <em>I’ve noticed it is updated fairly regularly.</em> Reading about other experiences, simple errors on the report and missing key details on the guidance have led to a failure, despite fully compromising all machines.</p>
@@ -504,10 +455,10 @@
 
 <p><img src="https://media.giphy.com/media/LTYT5GTIiAMBa/giphy.gif" width="50%" alt="Sleepy"></p>
 
-<h2 id="testing-vm">Testing VM</h2>
+<h3 id="testing-vm">Testing VM</h3>
 <p>I used a fully updated <a href="https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/">64-bit Kali VirtualBox VM</a> within my personal Windows 10 host machine, but I had the provided PWK Kali VMWare VM on standby, if needed. I personally did not have any issues with this configuration during the exam and is a chance I took against the recommendation of Offensive Security.</p>
 
-<h2 id="oscp-exam-challenge">OSCP Exam Challenge</h2>
+<h3 id="oscp-exam-challenge">OSCP Exam Challenge</h3>
 <p>I concur with others in the community and believe that utilizing <a href="https://github.com/codingo/Reconnoitre">Reconnoitre</a> while knocking out the Buffer Overflow is the most efficient way to begin the exam. Obviously, test and become familiar with Reconnoitre’s usage and outputs <strong>prior</strong> to the exam if you choose to use it. This is the Nmap command line that Reconnoitre used for a single machine, using a <code class="language-plaintext highlighter-rouge">--services</code> argument:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap -vv -Pn --disable-arp-ping -sS -A -sC -p- -T 3 -script-args=unsafe=1 -n -oN /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX.nmap -oX /root/Documents/PWK/OSCP/boxes/192.168.XX.XX/scans/192.168.XX.XX_nmap_scan_import.xml 192.168.XX.XX
 </code></pre></div></div>
@@ -518,7 +469,7 @@
 
 <p>The proctors were not an issue and were professional and unobtrusive. The webcam and communication with them was smooth, other than a single webcam restart.</p>
 
-<h3 id="progress-checklist">Progress Checklist</h3>
+<h4 id="progress-checklist">Progress Checklist</h4>
 <p>Within OneNote, I created a “Progress Checklist” tab, so I didn’t miss any major items. I modified it to fit the exam scope once I received the instructions. This was the basic structure:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Progress Checklist
 ├── Box 1 - 192.168.X.X
@@ -538,7 +489,7 @@
 └── etc...
 </code></pre></div></div>
 
-<h2 id="report-tips">Report Tips</h2>
+<h3 id="report-tips">Report Tips</h3>
 
 <p>Pre-stage your report. You can prep a decent portion of the report prior to the exam. This will save you some time after your exam ends. Even though I did this, I still spent roughly 10 hours compiling my 56 page report for submission. I did not try to reinvent the wheel and used the <a href="https://support.offensive-security.com/pwk-reporting/">recommended template</a>, only modifying it to fit the exam requirements.</p>
 
@@ -565,14 +516,14 @@
     └── Box5 - 10.10.10.5
 </code></pre></div></div>
 
-<h1 id="results">Results</h1>
+<h2 id="results">Results</h2>
 <p>It took 6 days to get my results - 4 business days and a weekend. While it felt like the longest wait of my life, the results finally came in and it was official, I had passed the OSCP.</p>
 
-<p><img src="https://gr0sabi.github.io/assets/images/20190412_135924-min.jpg" alt="OSCP Certificate"></p>
+<p><img src="https://gr0sabi.github.io/assets/images/oscp-post/20190412_135924-min.jpg" alt="OSCP Certificate"></p>
 <figcaption>Woohoo! I did it. <img class="emoji" title=":joy:" alt=":joy:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png" height="20" width="20"> </figcaption>
 <p><br></p>
 
-<h1 id="final-thoughts">Final Thoughts</h1>
+<h2 id="final-thoughts">Final Thoughts</h2>
 <p>I <em>really</em> enjoyed everything. The PWK course and the OSCP Exam Challenge was one of the most rewarding and humbling learning experiences I’ve professionally had. It’s one of very few certifications that lets you feel part of a community that is passionate about Information Security. Now to really dig deep and go for <del>OCSE</del> AWAE/OSWE!</p>
 
 <p>Good luck, try harder, and DM me on <a href="https://twitter.com/gr0sabi">Twitter</a> if you need anything.</p>
