@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "dark" # "default", "air", "aqua", "contrast", "dark"
 
 # Site Settings
 locale                   : "en-US"
-# title                    : " "
+title                    : "gr0sabi@notes"
 title_separator          : "|"
 name                     : "John Grow"
 description              : "An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around."
@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "John Grow"
   avatar           : "/assets/images/me.jpg"
-  bio              : "I :heart: InfoSec!"
+  bio              : "Dedicated Husband and Father. Passionate about Security. Veteran."
   location         : "Virginia Beach, Virginia, USA"
   email            :
   links:
