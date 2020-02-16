@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2020-02-10T09:41:03-05:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">gr0sabi@notes</title><subtitle>An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around.</subtitle><author><name>John Grow</name></author><entry><title type="html">OSCP: Insights, Best Practices, and Resources</title><link href="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/" rel="alternate" type="text/html" title="OSCP: Insights, Best Practices, and Resources" /><published>2019-04-13T00:00:00-04:00</published><updated>2019-04-13T00:00:00-04:00</updated><id>https://gr0sabi.github.io/security/oscp-insights-best-practices-resources</id><content type="html" xml:base="https://gr0sabi.github.io/security/oscp-insights-best-practices-resources/">&lt;p&gt;&lt;img src=&quot;/assets/images/oscp-post/offsec-oscp.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-16T11:08:55-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">gr0sabi@notes</title><subtitle>An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around.</subtitle><author><name>John Grow</name></author><entry><title type="html">OSCP: Insights, Best Practices, and Resources</title><link href="http://localhost:4000/certification/oscp-insights-best-practices-resources/" rel="alternate" type="text/html" title="OSCP: Insights, Best Practices, and Resources" /><published>2019-02-16T00:00:00-05:00</published><updated>2019-02-16T00:00:00-05:00</updated><id>http://localhost:4000/certification/oscp-insights-best-practices-resources</id><content type="html" xml:base="http://localhost:4000/certification/oscp-insights-best-practices-resources/">&lt;p&gt;&lt;img src=&quot;/assets/images/oscp-post/offsec-oscp.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;purpose&quot;&gt;Purpose&lt;/h2&gt;
 &lt;p&gt;I wrote this post to give back some of the insights I’ve discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices. There is &lt;em&gt;a lot&lt;/em&gt; of great information available on the Internet so I will make an honest effort not to sound like a broken record.&lt;/p&gt;
 
@@ -111,6 +111,8 @@
 
 &lt;p&gt;I recorded the entire exam with &lt;a href=&quot;https://obsproject.com/&quot; target=&quot;_blank&quot;&gt;OBS&lt;/a&gt;, following the advice of many. This was &lt;em&gt;very&lt;/em&gt; useful, as I missed a couple screenshots that I thought were useful for the report.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;:  Offensive Security has changed their policy in regards to screen recording and &lt;em&gt;no longer allows&lt;/em&gt; this to be done. See &lt;a href=&quot;https://www.offensive-security.com/faq/#screen-recording&quot;&gt;“Can I record my screen when taking the exam?”&lt;/a&gt;&lt;/p&gt;
+
 &lt;p&gt;The proctors were not an issue and were professional and unobtrusive. The webcam and communication with them was smooth, other than a single webcam restart.&lt;/p&gt;
 
 &lt;h4 id=&quot;progress-checklist&quot;&gt;Progress Checklist&lt;/h4&gt;
@@ -163,7 +165,7 @@
 &lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
 &lt;p&gt;It took 6 days to get my results - 4 business days and a weekend. While it felt like the longest wait of my life, the results finally came in and it was official, I had passed the OSCP.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://gr0sabi.github.io/assets/images/oscp-post/20190412_135924-min.jpg&quot; alt=&quot;OSCP Certificate&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/oscp-post/20190412_135924-min.jpg&quot; alt=&quot;OSCP Certificate&quot; /&gt;&lt;/p&gt;
 &lt;figcaption&gt;Woohoo! I did it. :joy: &lt;/figcaption&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 

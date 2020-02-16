@@ -2,9 +2,9 @@
 layout: single
 title:  "OSCP: Insights, Best Practices, and Resources"
 excerpt: "I wrote this post to give back some of the insights I've discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices."
-date: 2019-04-13
+date: 2019-02-16
 # classes: wide
-categories: [security]
+categories: [certification]
 tags: [oscp, hacking, penetration testing, offensive security, certification]
 header:
   teaser: /assets/images/oscp-post/offsec-oscp.png
@@ -124,6 +124,8 @@ nmap -vv -Pn --disable-arp-ping -sS -A -sC -p- -T 3 -script-args=unsafe=1 -n -oN
 In regards to the [*single use*](https://support.offensive-security.com/oscp-exam-guide/#section-1-exam-requirements){:target="_blank"} of Metasploit Modules and Meterpreter, I saved it until I *thoroughly* attempted every remaining machine **manually**. This strategy worked out in my favor, so it is good practice in the PWK Lab environment to attempt to compromise all machines manually.
 
 I recorded the entire exam with [OBS](https://obsproject.com/){:target="_blank"}, following the advice of many. This was *very* useful, as I missed a couple screenshots that I thought were useful for the report. 
+
+**Update**:  Offensive Security has changed their policy in regards to screen recording and *no longer allows* this to be done. See ["Can I record my screen when taking the exam?"](https://www.offensive-security.com/faq/#screen-recording)
 
 The proctors were not an issue and were professional and unobtrusive. The webcam and communication with them was smooth, other than a single webcam restart.
 
