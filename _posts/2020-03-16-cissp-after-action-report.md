@@ -131,7 +131,7 @@ Domain 8: Software Development Security (152 mins)
 
 ![](/assets/images/cissp-post/cookie-monster.gif)
 
-* 16Mar2020:   Received a Congrulations/Approved Application email from (ISC)², but it did not let me pay my AMF fees right away. But hey, 26 days from endorsement... not bad!
+* 16Mar2020:   Received a Congratulations/Approved Application email from (ISC)², but it did not let me pay my AMF fees right away. But hey, 26 days from endorsement... not bad!
 * 16Mar2020:   It finally showed the link to pay my fees, $125 later and I'm "officially" a CISSP.
 
 ## Thanks!
