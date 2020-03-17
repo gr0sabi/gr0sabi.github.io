@@ -2,9 +2,9 @@
 layout: single
 title:  "OSCP: Insights, Best Practices, and Resources"
 excerpt: "I wrote this post to give back some of the insights I've discovered on my journey to becoming an OSCP. It will cover personal insights, resources, and best practices."
-date: 2019-02-16
 # classes: wide
 categories: [certification]
+date: 2019-02-16
 tags: [oscp, hacking, penetration testing, offensive security, certification]
 header:
   teaser: /assets/images/oscp-post/offsec-oscp.png
