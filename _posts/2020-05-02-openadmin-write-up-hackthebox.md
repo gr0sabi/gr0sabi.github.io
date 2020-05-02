@@ -29,7 +29,8 @@ Directory brute-forcing revealed several directories.
 Command Used: `rustbuster dir -u http://10.10.10.171 -w /opt/SecLists/Discovery/Web-Content/common.txt -t 25`
 ![](\assets\images\htb\openadmin\rustbuster-openadmin.png)
 
-`http://10.10.10.171/music/` Clicking Login, takes us to an ONA interface.
+Clicking Login, takes us to an ONA interface.
+`http://10.10.10.171/music/` 
 ![](\assets\images\htb\openadmin\musicweb-openadmin.png)
 
 OpenNetAdmin IP Address Management (IPAM) system
