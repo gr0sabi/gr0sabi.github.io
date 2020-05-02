@@ -1,4 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2020-04-09T10:32:38-04:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">gr0sabi@notes</title><subtitle>An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around.</subtitle><author><name>John Grow</name></author><entry><title type="html">CISSP After-Action Report</title><link href="https://gr0sabi.github.io/certification/cissp-after-action-report/" rel="alternate" type="text/html" title="CISSP After-Action Report" /><published>2019-03-16T00:00:00-04:00</published><updated>2019-03-16T00:00:00-04:00</updated><id>https://gr0sabi.github.io/certification/cissp-after-action-report</id><content type="html" xml:base="https://gr0sabi.github.io/certification/cissp-after-action-report/">&lt;p&gt;&lt;img src=&quot;/assets/images/cissp-post/CISSP.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2020-05-02T13:46:48-04:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">gr0sabi@notes</title><subtitle>An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around.</subtitle><author><name>John Grow</name></author><entry><title type="html">OpenAdmin Write-Up: HackTheBox</title><link href="https://gr0sabi.github.io/hackthebox/openadmin-write-up-hackthebox/" rel="alternate" type="text/html" title="OpenAdmin Write-Up: HackTheBox" /><published>2020-05-02T00:00:00-04:00</published><updated>2020-05-02T00:00:00-04:00</updated><id>https://gr0sabi.github.io/hackthebox/openadmin-write-up-hackthebox</id><content type="html" xml:base="https://gr0sabi.github.io/hackthebox/openadmin-write-up-hackthebox/">&lt;p&gt;&lt;img src=&quot;\assets\images\htb\openadmin\banner-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;tldr&quot;&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;OpenAdmin was a fun, easy machine with an interesting internal web application. With only two open ports, SSH (22) and HTTP (80) the attack surface is minimal. Web enumeration revealed a few web applications, one being an outdated OpenNetAdmin IP Address Management (IPAM) system (v18.1.1), which allowed RCE as the www-data user. Once we obtained a shell, system enumeration revealed stored credentials which allowed us to pivot via SSH to another user (Jimmy) and capture the user flag. The Jimmy user was also part of a unique group that allowed us access to an internal web application that output the SSH private key (encrypted, but easily cracked) to another user (Joanna). Joanna had sudo privileges to run Nano, which using the help of GTFOBins, gave us a root shell.&lt;/p&gt;
+
+&lt;h2 id=&quot;nmap-port-scan&quot;&gt;Nmap Port Scan&lt;/h2&gt;
+&lt;p&gt;Looking at the scan, we see a couple of ports open.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nmap &lt;span class=&quot;nt&quot;&gt;-sCV&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-oN&lt;/span&gt; nmap/openadmin-full 10.10.10.171
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;\assets\images\htb\openadmin\openadmin-nmap.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;web-enumeration&quot;&gt;Web Enumeration&lt;/h2&gt;
+&lt;p&gt;Directory brute-forcing revealed several directories.&lt;/p&gt;
+
+&lt;p&gt;Command Used: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rustbuster dir -u http://10.10.10.171 -w /opt/SecLists/Discovery/Web-Content/common.txt -t 25&lt;/code&gt;
+&lt;img src=&quot;\assets\images\htb\openadmin\rustbuster-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://10.10.10.171/music/&lt;/code&gt; Clicking Login, takes us to an ONA interface.
+&lt;img src=&quot;\assets\images\htb\openadmin\musicweb-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;OpenNetAdmin IP Address Management (IPAM) system
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://10.10.10.171/ona/&lt;/code&gt;
+&lt;img src=&quot;\assets\images\htb\openadmin\ona-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;opennetadmin-exploitation&quot;&gt;OpenNetAdmin Exploitation&lt;/h2&gt;
+
+&lt;p&gt;Searchsploit revealed a couple of exploits for the version, one with Metasploit and one without. 
+&lt;img src=&quot;\assets\images\htb\openadmin\search-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Copying the bash script directly from searchsploit left a few random carriage returns, etc., so the script needed a little cleanup. But after being cleaned up, it worked and we have a rudimentary shell as www-data.
+&lt;img src=&quot;\assets\images\htb\openadmin\exploit-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I uploaded, upgraded and executed a proper php shell. 
+&lt;img src=&quot;\assets\images\htb\openadmin\phpshell-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/32cc7df561b8076201312e4fc5294f14.js&quot;&gt; &lt;/script&gt;
+
+&lt;h2 id=&quot;post-exploitation&quot;&gt;Post-Exploitation&lt;/h2&gt;
+
+&lt;p&gt;Time to enumerate! Quick hits with some grepping came up with:
+&lt;img src=&quot;\assets\images\htb\openadmin\database_settings-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Command used:  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;egrep -R 'password|pass'&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$ona_contexts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;s1&quot;&gt;'DEFAULT'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'databases'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 
+      &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;'db_type'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'mysqli'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;'db_host'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'localhost'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;'db_login'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ona_sys'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;'db_passwd'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'n1nj4W4rri0R!'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;'db_database'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ona_default'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;'db_debug'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'description'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Default data context'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'context_color'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'#D3DBFF'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Awesome, we have a password! Further enumerating the database gives some hashes.
+&lt;img src=&quot;\assets\images\htb\openadmin\OpenAdmin-HTB.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-jimmy&quot;&gt;Getting Jimmy&lt;/h2&gt;
+
+&lt;p&gt;The hashes were essentially useless. But we have another way! A quick look at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/passwd&lt;/code&gt; reveals two regular users: jimmy &amp;amp; joanna. A quick try with jimmy and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n1nj4W4rri0R!&lt;/code&gt; password gets us a SSH session and some interesting finds with LinPEAS!
+&lt;img src=&quot;\assets\images\htb\openadmin\linpeas1-openadmin.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;\assets\images\htb\openadmin\linpeas2-openadmin.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;\assets\images\htb\openadmin\linpeas3-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So it appears our friend Jimmy (and Joanna) is in an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;internal&lt;/code&gt; group which has write access to “/var/www/internal”. A quick telnet/curl to the unusual port reveals it is an Apache service hosting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;internal.openadmin.htb&lt;/code&gt;. Putting two and two together, it is probably serving the internal directory. Let’s check out that directory.&lt;/p&gt;
+
+&lt;p&gt;Well, it appears we can get Joanna’s SSH private key:
+main.php&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;?php session_start(); if (!isset ($_SESSION['username'])) { header(&quot;Location: /index.php&quot;); }; 
+# Open Admin Trusted
+# OpenAdmin
+$output = shell_exec('cat /home/joanna/.ssh/id_rsa');
+echo &quot;&amp;lt;pre&amp;gt;$output&amp;lt;/pre&amp;gt;&quot;;
+?&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;h3&amp;gt;Don't forget your &quot;ninja&quot; password&amp;lt;/h3&amp;gt;
+Click here to logout &amp;lt;a href=&quot;logout.php&quot; tite = &quot;Logout&quot;&amp;gt;Session
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Easy enough.
+&lt;img src=&quot;\assets\images\htb\openadmin\joannakey-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s encrypted, so we use:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/share/john/ssh2john.py joanna.key &amp;gt; joanna.hash&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;john joanna.hash --wordlist=/usr/share/wordlists/rockyou.txt&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;John made quick work of it, even in a VM.
+&lt;img src=&quot;\assets\images\htb\openadmin\john-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;moving-to-joanna&quot;&gt;Moving to Joanna&lt;/h2&gt;
+
+&lt;p&gt;We get in and capture user.txt.
+&lt;img src=&quot;\assets\images\htb\openadmin\user-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;privilege-escalation&quot;&gt;Privilege Escalation&lt;/h2&gt;
+
+&lt;p&gt;Interesting sudo finding:
+&lt;img src=&quot;\assets\images\htb\openadmin\sudo-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;GTFOBins shows us we can get a shell with Nano, let’s try it.
+&lt;img src=&quot;\assets\images\htb\openadmin\sudo_gtfobins-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo /bin/nano /opt/priv&lt;/code&gt;
+&lt;img src=&quot;\assets\images\htb\openadmin\root-openadmin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Got Root!&lt;/p&gt;</content><author><name>John Grow</name></author><category term="hackthebox" /><category term="hacking" /><category term="penetration testing" /><category term="write-ups" /><summary type="html">OpenAdmin was a fun, easy machine with an interesting internal web application.</summary></entry><entry><title type="html">CISSP After-Action Report</title><link href="https://gr0sabi.github.io/certification/cissp-after-action-report/" rel="alternate" type="text/html" title="CISSP After-Action Report" /><published>2019-03-16T00:00:00-04:00</published><updated>2019-03-16T00:00:00-04:00</updated><id>https://gr0sabi.github.io/certification/cissp-after-action-report</id><content type="html" xml:base="https://gr0sabi.github.io/certification/cissp-after-action-report/">&lt;p&gt;&lt;img src=&quot;/assets/images/cissp-post/CISSP.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;tldr&quot;&gt;TL;DR&lt;/h2&gt;
 &lt;p&gt;On 18 February 2020, I “provisionally passed” the CISSP examination on my first attempt at 100 questions with self-study. I’m writing this post to give back to the community some of my study practices that allowed me to conquer this beast of an exam. The &lt;a href=&quot;https://reddit.com/r/cissp&quot; target=&quot;_blank&quot;&gt;r/CISSP&lt;/a&gt; Reddit Community was instrumental in their general guidance, after-action reports and recommended study materials. Therefore, in order to tell them everything they already know &lt;strong&gt;BUT&lt;/strong&gt; especially to &lt;em&gt;reinforce&lt;/em&gt; everything they already know, this is what I did:&lt;/p&gt;
 
