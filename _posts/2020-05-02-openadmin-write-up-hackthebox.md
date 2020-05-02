@@ -69,6 +69,8 @@ I uploaded, upgraded and executed a proper php shell.
 
 {% gist 32cc7df561b8076201312e4fc5294f14 %}
 
+## Post-Exploitation
+
 Time to enumerate! Quick hits with some grepping came up with:
 ![](\assets\images\htb\openadmin\database_settings-openadmin.png)
 
@@ -99,9 +101,10 @@ $ona_contexts=array (
 
 ?>
 ```
-
-Enumerating the database gives some hashes.
+Awesome, we have a password! Further enumerating the database gives some hashes.
 ![](\assets\images\htb\openadmin\OpenAdmin-HTB.gif)
+
+## Getting Jimmy 
 
 The hashes were essentially useless. But we have another way! A quick look at `/etc/passwd` reveals two regular users: jimmy & joanna. A quick try with jimmy and the `n1nj4W4rri0R!` password gets us a SSH session and some interesting finds with LinPEAS!
 ![](\assets\images\htb\openadmin\linpeas1-openadmin.png)
@@ -137,8 +140,12 @@ It's encrypted, so we use:
 John made quick work of it, even in a VM.
 ![](\assets\images\htb\openadmin\john-openadmin.png)
 
+## Moving to Joanna
+
 We get in and capture user.txt.
 ![](\assets\images\htb\openadmin\user-openadmin.png)
+
+## Privilege Escalation
 
 Interesting sudo finding:
 ![](\assets\images\htb\openadmin\sudo-openadmin.png)
