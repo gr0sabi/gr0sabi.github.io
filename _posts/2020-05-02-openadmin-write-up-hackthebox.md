@@ -27,9 +27,11 @@ nmap -sCV -p- -oN nmap/openadmin-full 10.10.10.171
 Directory brute-forcing revealed several directories.
 
 Command Used: `rustbuster dir -u http://10.10.10.171 -w /opt/SecLists/Discovery/Web-Content/common.txt -t 25`
+
 ![](\assets\images\htb\openadmin\rustbuster-openadmin.png)
 
 Clicking Login, takes us to an ONA interface.
+
 `http://10.10.10.171/music/` 
 ![](\assets\images\htb\openadmin\musicweb-openadmin.png)
 
@@ -137,4 +139,4 @@ GTFOBins shows us we can get a shell with Nano, let's try it.
 `sudo /bin/nano /opt/priv`
 ![](\assets\images\htb\openadmin\root-openadmin.png)
 
-Got Root!
+Got Root! Thanks for reading.
