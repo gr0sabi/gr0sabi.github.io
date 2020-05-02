@@ -9,10 +9,7 @@ tags: [hackthebox, hacking, penetration testing, write-ups]
 header:
   teaser: \assets\images\htb\openadmin\banner-openadmin.png
   teaser_home_page: true
-toc: true
-toc_label: "Table of Contents"
-toc_icon: "book-dead"  # corresponding Font Awesome icon name (without fa prefix)
-toc_sticky: true
+toc: false
 ---
 ![](\assets\images\htb\openadmin\banner-openadmin.png)
 ## TL;DR
@@ -120,7 +117,7 @@ It's encrypted, so we use:
 
 `john joanna.hash --wordlist=/usr/share/wordlists/rockyou.txt`
 
-John made quick work of it, even in a VM.
+John made quick work of it, even in a VM. We get the password `bloodninjas`.
 ![](\assets\images\htb\openadmin\john-openadmin.png)
 
 ## Moving to Joanna
