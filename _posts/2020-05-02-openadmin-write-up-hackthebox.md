@@ -13,7 +13,7 @@ toc: false
 ---
 ![](\assets\images\htb\openadmin\banner-openadmin.png)
 ## TL;DR
-OpenAdmin was a fun, easy machine with an interesting internal web application. With only two open ports, SSH (22) and HTTP (80) the attack surface is minimal. Web enumeration revealed a few web applications, one being an outdated OpenNetAdmin IP Address Management (IPAM) system (v18.1.1), which allowed RCE as the www-data user. Once we obtained a shell, system enumeration revealed stored credentials which allowed us to pivot via SSH to another user (Jimmy) and capture the user flag. The Jimmy user was also part of a unique group that allowed us access to an internal web application that output the SSH private key (encrypted, but easily cracked) to another user (Joanna). Joanna had sudo privileges to run Nano, which using the help of GTFOBins, gave us a root shell.
+OpenAdmin was a fun, easy machine with an interesting internal web application. With only two open ports, SSH (22) and HTTP (80) the attack surface is minimal. Web enumeration revealed a few web applications, one being an outdated OpenNetAdmin IP Address Management (IPAM) system (v18.1.1), which allowed RCE as the www-data user. Once we obtained a shell, system enumeration revealed stored credentials which allowed us to pivot via SSH to another user (Jimmy). The Jimmy user was part of a unique group that allowed us access to an internal web application that output the SSH private key (encrypted, but easily cracked) to another user (Joanna). Joanna had sudo privileges to run Nano against a file, which using the help of GTFOBins, gave us a root shell.
 
 ## Nmap Port Scan
 Looking at the scan, we see a couple of ports open.
