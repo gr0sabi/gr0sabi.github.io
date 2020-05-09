@@ -16,4 +16,10 @@ var store = [{
         "tags": ["hackthebox","hacking","penetration testing","write-ups"],
         "url": "https://gr0sabi.github.io/hackthebox/openadmin-write-up-hackthebox/",
         "teaser": "https://gr0sabi.github.io/%5Cassets%5Cimages%5Chtb%5Copenadmin%5Cbanner-openadmin.png"
+      },{
+        "title": "Obscurity Write-Up: HackTheBox",
+        "excerpt":"TL;DR Obscurity was a fantastic machine of medium difficulty by clubby789 at HackTheBox. Rolling a few custom Python scripts for a web service, encryption, and SSH, Obscurity gave a couple of holes that I could squeeze through. With only a couple of open ports, it led me straight to enumerating...","categories": ["hackthebox"],
+        "tags": ["hackthebox","reversing","python","penetration testing","write-ups"],
+        "url": "https://gr0sabi.github.io/hackthebox/obscurity-write-up-hackthebox/",
+        "teaser": "https://gr0sabi.github.io/%5Cassets%5Cimages%5Chtb%5Cobscurity%5Cbanner-obscurity.png"
       }]
