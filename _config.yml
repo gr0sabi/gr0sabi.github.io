@@ -115,24 +115,18 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:john@gr0sabi.dev
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/gr0sabi"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+    - label: "HackTheBox"
+      icon: "fas fa-fw fa-box"
+      url: "https://www.hackthebox.eu/profile/23241"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/gr0sabi"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/johngrow/"
-    - label: "YouTube"
-      icon: "fab fa-fw fa-youtube"
-      # url: "https://www.youtube.com/user/youdoober"
 
 # Site Footer
 footer:
