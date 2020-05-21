@@ -320,6 +320,15 @@ body:hover .visually-hidden button {
     color: $youtube-color;
   }
 
+  .htb {
+    background-image: url("/assets/images/htb-icon.png") !important;
+    background-repeat: no-repeat;
+    float: left;
+    height: 12px;
+    margin-top: 3px;
+    margin-left: 3px;
+  }
+
   .fa-xing,
   .fa-xing-square {
     color: $xing-color;
