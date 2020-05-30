@@ -330,7 +330,7 @@
       
       <img src="\assets\images\htb\resolute\resolute-banner.png" alt="" style="margin-top:5px; margin-bottom:15px;">
       
-      Resolute was a straight-forward medium-rated machine on Hack The Box created by egre55. Initial recon revealed an open LDAP service which leaked all local users and a default password. This allowed a password spray against the users and a successful login as user melanie. As melanie, further machine enumeration revealed PowerShell transcripts that leaked a command containing user ryan’s password. User ryan is part of the Contractors group, which is also contained in the DnsAdmin group. Being a member of the DnsAdmin is abused to add first compromised user melanie as a Domain Admin, owning the machine.
+      Resolute was a straight-forward medium-rated machine on Hack The Box created by egre55. Initial recon revealed an open LDAP service which leaked all local users and a default password. This allowed a password spray WinRM and a successful login as user melanie. As melanie, further machine enumeration revealed PowerShell transcripts that leaked a command containing user ryan’s password. User ryan is part of the Contractors group, which is also contained in the DnsAdmin group. Being a member of the DnsAdmin is abused to add the first compromised user melanie as a Domain Admin, owning the machine.
 
     </p>
     
@@ -339,7 +339,7 @@
       
       <a href="/tags/#hackthebox" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>hackthebox</a>
       
-      <a href="/tags/#ldap" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>ldap</a>
+      <a href="/tags/#dns" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>dns</a>
       
       <a href="/tags/#hacking" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>hacking</a>
       

@@ -5,7 +5,7 @@ excerpt: "Resolute was a straight-forward *medium*-rated machine on Hack The Box
 classes: wide
 categories: [hackthebox]
 date: 2020-05-30
-tags: [hackthebox, ldap, hacking, penetration testing, write-ups]
+tags: [hackthebox, dns, hacking, penetration testing, write-ups]
 header:
   teaser: \assets\images\htb\resolute\resolute-banner.png
   teaser_home_page: true

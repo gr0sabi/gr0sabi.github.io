@@ -24,8 +24,8 @@ var store = [{
         "teaser": "https://gr0sabi.github.io/%5Cassets%5Cimages%5Chtb%5Cobscurity%5Cbanner-obscurity.png"
       },{
         "title": "Resolute Write-Up: Hack The Box",
-        "excerpt":"TL;DR Resolute was a straight-forward medium-rated machine on Hack The Box created by egre55. Initial recon revealed an open LDAP service which leaked all local users and a default password. This allowed a password spray against the users and a successful login as user melanie. As melanie, further machine enumeration...","categories": ["hackthebox"],
-        "tags": ["hackthebox","ldap","hacking","penetration testing","write-ups"],
+        "excerpt":"TL;DR Resolute was a straight-forward medium-rated machine on Hack The Box created by egre55. Initial recon revealed an open LDAP service which leaked all local users and a default password. This allowed a password spray using WinRM and a successful login as user melanie. As melanie, further machine enumeration revealed...","categories": ["hackthebox"],
+        "tags": ["hackthebox","dns","hacking","penetration testing","write-ups"],
         "url": "https://gr0sabi.github.io/hackthebox/resolute-write-up-hack-the-box/",
         "teaser": "https://gr0sabi.github.io/%5Cassets%5Cimages%5Chtb%5Cresolute%5Cresolute-banner.png"
       }]
