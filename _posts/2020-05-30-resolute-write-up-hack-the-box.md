@@ -12,7 +12,7 @@ header:
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "database"  # corresponding Font Awesome icon name (without fa prefix)
-# toc_sticky: true
+toc_sticky: true
 ---
 ![](\assets\images\htb\resolute\resolute-banner.png)
 ## TL;DR
