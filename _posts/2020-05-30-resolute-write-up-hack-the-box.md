@@ -2,7 +2,7 @@
 layout: single
 title: 'Resolute Write-Up: Hack The Box'
 excerpt: "Resolute was a straight-forward *medium*-rated machine on Hack The Box created by egre55. Initial recon revealed an open LDAP service which leaked all local users and a default password. This allowed a password spray WinRM and a successful login as user `melanie`. As `melanie`, further machine enumeration revealed PowerShell transcripts that leaked a command containing user `ryan`'s password. User `ryan` is part of the `Contractors` group, which is also contained in the `DnsAdmin` group. Being a member of the `DnsAdmin` is abused to add the first compromised user `melanie` as a `Domain Admin`, owning the machine."
-classes: wide
+# classes: wide
 categories: [hackthebox]
 date: 2020-05-30
 tags: [hackthebox, dns, hacking, penetration testing, write-ups]
