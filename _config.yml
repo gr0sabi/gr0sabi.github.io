@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "dark" # "default", "air", "aqua", "contrast", "dark"
 locale                   : "en-US"
 title                    : "gr0sabi@notes"
 title_separator          : "|"
-name                     : "John D. Grow"
+name                     : "J.D. Grow"
 description              : "An information security blog. Various posts related to the struggle and pursuit of knowing a little about poking at machines."
 url                      : "https://gr0sabi.github.io"
 baseurl                  : # "/_site"
@@ -106,7 +106,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "John David Grow"
+  name             : "J.D. Grow"
   avatar           : "/assets/images/me.jpg"
   bio              : "Dedicated Husband and Father. Passionate about Security. Veteran."
   location         : "Virginia Beach, Virginia, USA"
