@@ -1,7 +1,7 @@
 ---
 layout: single
 title: 'Nest Write-Up: Hack The Box'
-excerpt: "Nest was an excellent *easy*-rated machine on Hack The Box created by VbScrub. Initial recon revealed an open SMB and an uncommon HQK Reporting service. Enumerating SMB revealed some default credentials, which allowed further SMB read access. Digging further we come across some encrypted credentials and a Visual Basic project. Building the project we are able to decrypt yet another password, but this time for user `c.smith`. We use the new found creds to go further into SMB access and discover the HQK Reporting binary. Looking at it with dnSpy, with a tiny bit of reversing, we get the Administrator password and root flag."
+excerpt: "Nest was an excellent *easy*-rated machine on Hack The Box created by VbScrub. Initial recon revealed an open SMB port and an uncommon HQK Reporting service. Enumerating SMB revealed some default credentials, which allowed further read access. Digging further we come across some encrypted credentials and a Visual Basic project. Building the project we are able to decrypt yet another password, but this time for an user `c.smith`. We use the new found creds to go further into the SMB gauntlet and discover the HQK Reporting binary. Tearing it apart with dnSpy, and a touch of reversing, we get the Administrator password and root flag."
 classes: wide
 categories: [hackthebox]
 date: 2020-06-06
@@ -16,7 +16,7 @@ toc_sticky: false
 ---
 ![](\assets\images\htb\nest\nest-banner.png)
 ## TL;DR
-Nest was an excellent *easy*-rated machine on Hack The Box created by VbScrub. Initial recon revealed an open SMB and an uncommon HQK Reporting service. Enumerating SMB revealed some default credentials, which allowed further SMB read access. Digging further we come across some encrypted credentials and a Visual Basic project. Building the project we are able to decrypt yet another password, but this time for user `c.smith`. We use the new found creds to go further into SMB access and discover the HQK Reporting binary. Looking at it with dnSpy, with a tiny bit of reversing, we get the Administrator password and root flag.
+Nest was an excellent *easy*-rated machine on Hack The Box created by VbScrub. Initial recon revealed an open SMB port and an uncommon HQK Reporting service. Enumerating SMB revealed some default credentials, which allowed further read access. Digging further we come across some encrypted credentials and a Visual Basic project. Building the project we are able to decrypt yet another password, but this time for an user `c.smith`. We use the new found creds to go further into the SMB gauntlet and discover the HQK Reporting binary. Tearing it apart with dnSpy, and a touch of reversing, we get the Administrator password and root flag.
 
 ## Nmap Port Scan
 `nmap -sCV -Pn -n -p- -T4 -oN nmap/full-nest 10.10.10.178`
