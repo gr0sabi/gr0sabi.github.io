@@ -5,7 +5,7 @@ excerpt: "Nest was an excellent *easy*-rated machine on Hack The Box created by 
 classes: wide
 categories: [hackthebox]
 date: 2020-06-06
-tags: [hackthebox, dns, hacking, penetration testing, write-ups]
+tags: [hackthebox, smb, dnspy, penetration testing, write-ups]
 header:
   teaser: \assets\images\htb\nest\nest-banner.png
   teaser_home_page: true
