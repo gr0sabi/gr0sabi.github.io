@@ -302,6 +302,124 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
+      <a href="/hackthebox/book-write-up-hack-the-box/" rel="permalink">Book Write-Up: HackTheBox
+</a>
+      
+    </h2>
+
+    <p class="page__meta">
+      
+      <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time
+        datetime="2020-07-11T00:00:00-04:00">July 11, 2020 </time>&emsp;
+      
+      
+      <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+
+      
+    </p>
+
+    <!--Post Excerpt Image-->
+    
+    <p class="archive__item-excerpt" itemprop="description">
+      
+      <img src="\assets\images\htb\book\book-banner.png" alt="" style="margin-top:5px; margin-bottom:15px;">
+      
+      Book was a medium machine on Hack The Box created by MrR3boot. Initial recon revealed a web application login that is vulnerable to SQL truncation attack, allowing login as admin. Once admin, we can inject XSS payloads to read local files through dynamically generated PDFs, which is used to extract a user’s private SSH key. Finally, logged in as the user reader via SSH, a vulnerable version of logrotate running as root is discovered, which is exploited to escalate to the root user.
+
+    </p>
+    
+
+    <!--Tags-->
+      
+      <a href="/tags/#hackthebox" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>hackthebox</a>
+      
+      <a href="/tags/#xxs" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>xxs</a>
+      
+      <a href="/tags/#sqli" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>sqli</a>
+      
+      <a href="/tags/#hacking" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>hacking</a>
+      
+      <a href="/tags/#penetration testing" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>penetration testing</a>
+      
+      <a href="/tags/#write-ups" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>write-ups</a>
+      
+
+  </article>
+</div>
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+      <a href="/hackthebox/nest-write-up-hack-the-box/" rel="permalink">Nest Write-Up: Hack The Box
+</a>
+      
+    </h2>
+
+    <p class="page__meta">
+      
+      <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time
+        datetime="2020-06-06T00:00:00-04:00">June 06, 2020 </time>&emsp;
+      
+      
+      <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+
+
+      
+    </p>
+
+    <!--Post Excerpt Image-->
+    
+    <p class="archive__item-excerpt" itemprop="description">
+      
+      <img src="\assets\images\htb\nest\nest-banner.png" alt="" style="margin-top:5px; margin-bottom:15px;">
+      
+      Nest was an excellent easy-rated machine on Hack The Box created by VbScrub. Initial recon revealed an open SMB port and an uncommon HQK Reporting service. Enumerating SMB revealed some default credentials, which allowed further read access. Digging further we come across some encrypted credentials and a Visual Basic project. Building the project we are able to decrypt yet another password, but this time for an user c.smith. We use the new found creds to go further into the SMB gauntlet and discover the HQK Reporting binary. Tearing it apart with dnSpy, and a touch of reversing, we get the Administrator password and root flag.
+
+    </p>
+    
+
+    <!--Tags-->
+      
+      <a href="/tags/#hackthebox" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>hackthebox</a>
+      
+      <a href="/tags/#smb" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>smb</a>
+      
+      <a href="/tags/#dnspy" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>dnspy</a>
+      
+      <a href="/tags/#penetration testing" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>penetration testing</a>
+      
+      <a href="/tags/#write-ups" class="page__meta page__taxonomy-item" rel="tag"><i class="fas fa-tags" style="margin-right: 8px;"></i>write-ups</a>
+      
+
+  </article>
+</div>
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
       <a href="/hackthebox/resolute-write-up-hack-the-box/" rel="permalink">Resolute Write-Up: Hack The Box
 </a>
       

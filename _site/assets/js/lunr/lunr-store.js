@@ -28,4 +28,16 @@ var store = [{
         "tags": ["hackthebox","dns","hacking","penetration testing","write-ups"],
         "url": "https://gr0sabi.github.io/hackthebox/resolute-write-up-hack-the-box/",
         "teaser": "https://gr0sabi.github.io/%5Cassets%5Cimages%5Chtb%5Cresolute%5Cresolute-banner.png"
+      },{
+        "title": "Nest Write-Up: Hack The Box",
+        "excerpt":"TL;DR Nest was an excellent easy-rated machine on Hack The Box created by VbScrub. Initial recon revealed an open SMB port and an uncommon HQK Reporting service. Enumerating SMB revealed some default credentials, which allowed further read access. Digging further we come across some encrypted credentials and a Visual Basic...","categories": ["hackthebox"],
+        "tags": ["hackthebox","smb","dnspy","penetration testing","write-ups"],
+        "url": "https://gr0sabi.github.io/hackthebox/nest-write-up-hack-the-box/",
+        "teaser": "https://gr0sabi.github.io/%5Cassets%5Cimages%5Chtb%5Cnest%5Cnest-banner.png"
+      },{
+        "title": "Book Write-Up: HackTheBox",
+        "excerpt":"TL;DR Book was a medium machine on Hack The Box created by MrR3boot. Initial recon revealed a web application whose user registration is vulnerable to a SQL truncation attack, leading to login as admin. Once admin, we can inject XSS payloads to read local files through dynamically generated PDFs, which...","categories": ["hackthebox"],
+        "tags": ["hackthebox","xxs","sqli","hacking","penetration testing","write-ups"],
+        "url": "https://gr0sabi.github.io/hackthebox/book-write-up-hack-the-box/",
+        "teaser": "https://gr0sabi.github.io/%5Cassets%5Cimages%5Chtb%5Cbook%5Cbook-banner.png"
       }]
