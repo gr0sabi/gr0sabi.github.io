@@ -40,4 +40,10 @@ var store = [{
         "tags": ["hackthebox","xxs","sqli","hacking","penetration testing","write-ups"],
         "url": "https://gr0sabi.github.io/hackthebox/book-write-up-hack-the-box/",
         "teaser": "https://gr0sabi.github.io/%5Cassets%5Cimages%5Chtb%5Cbook%5Cbook-banner.png"
+      },{
+        "title": "Traceback Write-Up - HackTheBox",
+        "excerpt":"Summary Traceback was an easy-rated, Linux machine made by Xh4H on HackTheBox that allowed some Lua interaction and unique escalation of privileges. The port scan showed SSH and an Apache server running on port 80. Looking at the web server, it showed a compromised web page with an interesting comment...","categories": ["hackthebox"],
+        "tags": ["hackthebox","hacking","penetration testing","write-ups","linux"],
+        "url": "https://gr0sabi.github.io/hackthebox/traceback-write-up-hackthebox/",
+        "teaser": "https://gr0sabi.github.io/%5Cassets%5Cimages%5Chtb%5Ctraceback%5Cbanner-traceback.png"
       }]
