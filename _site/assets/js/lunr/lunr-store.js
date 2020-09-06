@@ -41,6 +41,12 @@ var store = [{
         "url": "https://gr0sabi.github.io/hackthebox/book-write-up-hack-the-box/",
         "teaser": "https://gr0sabi.github.io/%5Cassets%5Cimages%5Chtb%5Cbook%5Cbook-banner.png"
       },{
+        "title": "Cascade Write-Up: HackTheBox",
+        "excerpt":"TL;DR Cascade is a well-made, straight-forward machine that is a fun enumeration exercise and requires a bit of .NET debugging. Port enumeration reveals an open LDAP service that is used to dump user objects. One user (Ryan Thompson) has a custom attribute (cascadeLegacyPwd) that reveals a Base64-encoded password which allows...","categories": ["hackthebox"],
+        "tags": ["hackthebox","hacking","penetration testing","write-ups"],
+        "url": "https://gr0sabi.github.io/hackthebox/cascade-write-up-hackthebox/",
+        "teaser": "https://gr0sabi.github.io/%5Cassets%5Cimages%5Chtb%5Ccascade%5Ccascade-banner.png"
+      },{
         "title": "Traceback Write-Up - HackTheBox",
         "excerpt":"Summary Traceback was an easy-rated, Linux machine made by Xh4H on HackTheBox that allowed some Lua interaction and unique escalation of privileges. The port scan showed SSH and an Apache server running on port 80. Looking at the web server, it showed a compromised web page with an interesting comment...","categories": ["hackthebox"],
         "tags": ["hackthebox","hacking","penetration testing","write-ups","linux"],
