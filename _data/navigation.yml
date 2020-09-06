@@ -1,7 +1,7 @@
 # main links
 main:
-  # - title: "Home"
-  #   url: /
+  - title: "Curriculum Vitae"
+    url: /resume/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
