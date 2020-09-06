@@ -46,4 +46,10 @@ var store = [{
         "tags": ["hackthebox","hacking","penetration testing","write-ups","linux"],
         "url": "https://gr0sabi.github.io/hackthebox/traceback-write-up-hackthebox/",
         "teaser": "https://gr0sabi.github.io/%5Cassets%5Cimages%5Chtb%5Ctraceback%5Cbanner-traceback.png"
+      },{
+        "title": "Remote Write-Up: HackTheBox",
+        "excerpt":"TL;DR Remote was a Windows-based, easy level challenge from mrb3n on HackTheBox that had a cool privilege escalation. The initial Nmap scan showed multiple interesting ports - FTP with anonymous login, web server on port 80, SMB on 445 and a open NFS share. I started by connecting to FTP...","categories": ["hackthebox"],
+        "tags": ["hackthebox","hacking","penetration testing","write-ups","CVE","windows"],
+        "url": "https://gr0sabi.github.io/hackthebox/remote-write-up-hackthebox/",
+        "teaser": "https://gr0sabi.github.io/%5Cassets%5Cimages%5Chtb%5Cremote%5Cbanner-remote.png"
       }]
